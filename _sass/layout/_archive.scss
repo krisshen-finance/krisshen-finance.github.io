@@ -10,8 +10,9 @@
   }
 
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
+    @include span(8 of 12 last);
+    @include prefix(0 of 12);
+    margin-left: 33.33333%;  // Add left margin to prevent overlap with sidebar
   }
 
   a {

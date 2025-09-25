@@ -25,10 +25,13 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(4 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
+    position: fixed;
+    left: 0;
+    width: 33.33333%;  // Explicitly set width to one-third
 
     &:hover {
       opacity: 1;
@@ -36,7 +39,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
+    // max-width: $sidebar-link-max-width;  // Removed to allow full width
     padding-right: 0;
   }
 
@@ -83,23 +86,29 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
+  width: 100%;  // Changed from 36px to allow full width
   // set width only, for non-square avatars
   // height: 36px;
 
   @include breakpoint($large) {
     display: block;
-    width: auto;
+    width: 100%;  // Ensure full width on large screens
     height: auto;
   }
 
   img {
-    max-width: 175px;
+    max-width: none;
+    width: 80%;  // Reduced from 100% to 80% (0.8 times the current size)
+    min-width: 240px;  // Reduced proportionally
     border-radius: 50%;
+    display: block;
+    margin: 0 auto;  // Center the image horizontally
 
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid var(--global-border-color);
+      width: 80%;  // Keep consistent 80% width on large screens
+      max-width: none;
     }
   }
 }
@@ -110,17 +119,22 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
+  text-align: center;  // Center align text content
 
   @include breakpoint($large) {
     display: block;
-    width: 100%;
+    width: 80%;  // Match the profile picture width
     padding-left: 0;
     padding-right: 0;
+    text-align: center;  // Keep center alignment on large screens
+    margin: 0 auto;  // Center the text content container
   }
 }
 
 .author__name {
   margin: 0;
+  word-wrap: break-word;  // Allow long names to wrap
+  hyphens: auto;  // Add hyphens if needed
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -150,6 +164,8 @@
 
 .author__bio {
   margin: 0;
+  word-wrap: break-word;  // Allow long bio text to wrap
+  hyphens: auto;  // Add hyphens if needed
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -174,6 +190,8 @@
 
   @include breakpoint($large) {
     display: block;
+    width: 80%;  // Match the profile picture width
+    margin: 0 auto;  // Center the URLs container
   }
 
   button {
