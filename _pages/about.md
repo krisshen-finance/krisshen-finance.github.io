@@ -23,7 +23,7 @@ I hold a B.A. in Economics and a B.S. in Mathematics from Wuhan University, and 
 -->
 
 ## Contact
-Email: [shen.1732@osu.edu](mailto:shen.1732@osu.edu)
+Email: <a href="mailto:shen.1732@osu.edu" target="_blank">shen.1732@osu.edu</a>
 
 <!-- 
 ## Research Interests
