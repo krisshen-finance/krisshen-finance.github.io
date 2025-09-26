@@ -84,9 +84,8 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 100%;  // Changed from 36px to allow full width
+  display: block;  // Changed from table-cell to block for mobile
+  width: 100%;
   // set width only, for non-square avatars
   // height: 36px;
 
@@ -106,12 +105,14 @@
     width: 60%;
     min-width: 120px;
     max-width: 200px;
+    margin-bottom: 15px;  // Add space between picture and text
 
     // Medium screens: Slightly larger
     @include breakpoint($medium) {
       width: 70%;
       min-width: 160px;
       max-width: 240px;
+      margin-bottom: 20px;
     }
 
     @include breakpoint($large) {
@@ -120,13 +121,13 @@
       width: 80%;  // Keep consistent 80% width on large screens
       min-width: 240px;
       max-width: none;
+      margin-bottom: 10px;
     }
   }
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
+  display: block;  // Changed from table-cell to block for mobile
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
@@ -219,8 +220,7 @@
 
 .author__urls-wrapper {
   position: relative;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;  // Changed from table-cell to block for mobile
   font-family: $sans-serif;
   z-index: 10;
   position: relative;
