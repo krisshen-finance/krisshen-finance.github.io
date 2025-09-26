@@ -20,3 +20,38 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
 
 <meta http-equiv="cleartype" content="on">
+
+{% if page.permalink == "/" %}
+<!-- Schema.org Person markup for homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kris Shen",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    {% if site.author.links %}
+      {% for link in site.author.links %}
+        "{{ link.url }}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+  ],
+  "jobTitle": "PhD Candidate in Finance",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "The Ohio State University, Fisher College of Business"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Cornell University"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Wuhan University"
+    }
+  ],
+  "email": "shen.1732@osu.edu"
+}
+</script>
+{% endif %}
