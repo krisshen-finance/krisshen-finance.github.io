@@ -11,6 +11,12 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "CV"
+    external_url: /files/CV_Kris_09252025.pdf
+
   # - title: "Publications"
   #   url: /publications/
 
