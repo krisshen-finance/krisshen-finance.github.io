@@ -1,0 +1,18 @@
+/* Custom styles for research page */
+
+/* Make abstract text smaller */
+.abstract-paragraph {
+  font-size: 0.85em !important;
+  line-height: 1.5 !important;
+  display: inline-block;
+}
+
+/* Make the "Abstract:" label smaller as well */
+.page__content p strong:contains("Abstract:") {
+  font-size: 0.85em !important;
+}
+
+/* Direct selector for Abstract label */
+.page__content p strong[data-text="Abstract:"] {
+  font-size: 0.85em !important;
+}

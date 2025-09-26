@@ -7,12 +7,12 @@ author_profile: true
 
 ## Publications
 
-1. **<a href="https://onlinelibrary.wiley.com/doi/10.1111/fire.12439" target="_blank">Are there too few publicly listed firms in the US?</a>**  
+1. **<a href="https://onlinelibrary.wiley.com/doi/10.1111/fire.12439" target="_blank">Are There Too Few Publicly Listed Firms in the US?</a>**  
 with <a href="https://discover.research.utoronto.ca/7530-craig-doidge" target="_blank">Craig Doidge</a>, <a href="https://www.johnson.cornell.edu/faculty-research/faculty/gak56/" target="_blank">George Andrew Karolyi</a>, and <a href="https://u.osu.edu/stulz.1/" target="_blank">René M. Stulz</a>, *Financial Review*, 2025, 60, 317–329.
 
-   **Abstract:** Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.
-
-- **Media Coverage:** <a href="https://corpgov.law.harvard.edu/2025/04/02/are-there-too-few-publicly-listed-firms-in-the-us/" target="_blank">Harvard Law School Forum on Corporate Governance</a>
+   <span class="abstract-paragraph"><strong>Abstract:</strong> Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</span>
+   
+   - **Media Coverage:** <a href="https://corpgov.law.harvard.edu/2025/04/02/are-there-too-few-publicly-listed-firms-in-the-us/" target="_blank">Harvard Law School Forum on Corporate Governance</a>
 
 
 
@@ -20,7 +20,7 @@ with <a href="https://discover.research.utoronto.ca/7530-craig-doidge" target="_
 
 1. **Artificial Intelligence, Opportunity, and Regulatory Uncertainty: Implications for Asset Pricing** 
 
-   **Abstract:** This paper studies two channels—opportunity and regulatory uncertainty—through which
+   <span class="abstract-paragraph"><strong>Abstract:</strong> This paper studies two channels—opportunity and regulatory uncertainty—through which
 Artificial Intelligence (AI) affects the stock prices and risk premia. On the one hand, advances
 in AI present firms with opportunities, leading them to exhibit characteristics of growth
 firms and earn lower expected returns. On the other hand, firms face increased regulatory
@@ -29,7 +29,7 @@ expected returns. Using conference call transcripts, I construct a firm-level me
 Exposure that captures the level of attention analysts and managers devote to AI-related
 topics at specific points in time. Empirically and theoretically, I show that these two channels
 exert opposing effects: firms focused on opportunity earn a negative AI risk premium, while
-those more affected by regulatory uncertainty earn a positive AI risk premium. 
+those more affected by regulatory uncertainty earn a positive AI risk premium.</span> 
 
    - **Conferences:** 2026 AFA PhD Poster Session (scheduled); 2025 OSU Fisher AI in Business Conference; 2025 SFA (scheduled); 2025 Hetergeneous Agents in Asset Pricing; 2025 Finance Theory Group
 

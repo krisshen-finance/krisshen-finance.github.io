@@ -18,13 +18,15 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(8 of 12 last);
+    @include span(8 of 12 last);   
     @include prefix(0 of 12);
     @include suffix(0 of 12);
-    margin-left: 33.33333%;  // Add left margin to prevent overlap with sidebar
-  }
-
-  .page__inner-wrap {
+    margin-left: 45%;              // Larger gap: 12% (sidebar left) + 25% (sidebar width) + 8% gap
+    margin-right: 2%;              // Small right margin for balance
+    max-width: 53%;                // Adjust width to fit with larger gap
+    width: 53%;                    // Force the width
+    padding-right: 0.5em;          // Standard padding
+  }  .page__inner-wrap {
     @include full();
 
     .page__content,
@@ -38,6 +40,7 @@
 .page__title {
   margin-top: 0;
   line-height: 1;
+  text-align: center;
 
   & + .page__meta {
     margin-top: -0.5em;

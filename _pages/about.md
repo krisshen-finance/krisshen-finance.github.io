@@ -9,9 +9,9 @@ redirect_from:
 
 <!-- Assistant Professor of Finance at [Your Institution] -->
 
-I am an fourth-year PhD candidate in Finance at The Ohio State University, Fisher College of Business.
+I am a fourth-year PhD candidate in Finance at The Ohio State University, Fisher College of Business.
 
-My research interests include asset pricing, technology and innovations, private markets vs public markets.
+My research interests include asset pricing, technology and innovation, private market vs public market.
 
 I hold a B.A. in Economics and a B.S. in Mathematics from Wuhan University, and an M.Eng. in Financial Engineering from Cornell University.
 

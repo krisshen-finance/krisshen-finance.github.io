@@ -30,15 +30,14 @@
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
     position: fixed;
-    left: 0;
-    width: 33.33333%;  // Explicitly set width to one-third
+    left: 12%;                    // Move sidebar more to center - larger left margin
+    width: 25%;                   // Slightly narrower sidebar for better proportions
+    text-align: center;           // Center all content within the sidebar
 
     &:hover {
       opacity: 1;
     }
-  }
-
-  @include breakpoint($x-large) {
+  }  @include breakpoint($x-large) {
     // max-width: $sidebar-link-max-width;  // Removed to allow full width
     padding-right: 0;
   }
@@ -93,6 +92,7 @@
     display: block;
     width: 100%;  // Ensure full width on large screens
     height: auto;
+    text-align: center;  // Center align the entire sidebar section
   }
 
   img {
@@ -118,8 +118,8 @@
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid var(--global-border-color);
-      width: 80%;  // Keep consistent 80% width on large screens
-      min-width: 240px;
+      width: 90%;  // Make profile picture even larger
+      min-width: 280px;
       max-width: none;
       margin-bottom: 10px;
     }
