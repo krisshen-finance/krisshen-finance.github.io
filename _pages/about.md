@@ -2,6 +2,7 @@
 permalink: /
 title: "Kris Shen"
 author_profile: true
+description: "Kris Shen - PhD candidate in Finance at The Ohio State University"
 redirect_from: 
   - /about/
   - /about.html
