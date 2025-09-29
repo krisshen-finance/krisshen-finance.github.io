@@ -1,8 +1,6 @@
 {% include base_path %}
 
 <meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="author" content="{{ site.name }}">
 
 {% include seo.html %}
@@ -55,6 +53,21 @@
     }
   ],
   "email": "shen.1732@osu.edu"
+}
+</script>
+<!-- WebSite structured data to reinforce site name -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kris Shen",
+  "url": "{{ site.url }}",
+  "alternateName": "Kris Shen Finance",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 {% endif %}
