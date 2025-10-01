@@ -25,8 +25,18 @@ author_profile: true
     <div class="pub-body" style="font-size:0.9em; margin-top:0.5em;"><br>
     <strong>Presentations:</strong> 2026 AFA PhD Poster Session (scheduled); 2025 OSU Fisher AI in Business Conference; 2025 SFA (scheduled); 2025 Hetergeneous Agents in Asset Pricing; 2025 Finance Theory Group<br>
     <br>
-    <strong>Abstract:</strong> <div style="text-align: justify;">This paper studies two channels—opportunity and regulatory uncertainty—through which Artificial Intelligence (AI) affects the stock prices and risk premia. On the one hand, advances in AI present firms with opportunities, leading them to exhibit characteristics of growth firms and earn lower expected returns. On the other hand, firms face increased regulatory uncertainty in AI development, increasing their political risk exposure and resulting in higher expected returns. Using conference call transcripts, I construct a firm-level measure of AI Exposure that captures the level of attention analysts and managers devote to AI-related topics at specific points in time. Empirically and theoretically, I show that these two channels exert opposing effects: firms focused on opportunity earn a negative AI risk premium, while those more affected by regulatory uncertainty earn a positive AI risk premium.</div>
+    <strong>Abstract:</strong> <div style="text-align: justify;">This paper studies two channels—opportunity and regulatory uncertainty—through which Artificial Intelligence (AI) affects the stock prices and risk premia. On the one hand, advances in AI present firms with opportunities, leading them to exhibit characteristics of growth firms and earn lower expected returns. On the other hand, firms face increased regulatory uncertainty in AI development, increasing their political risk exposure and resulting in higher expected returns. Using conference call transcripts, I construct a firm-level measure of AI Exposure that captures the level of attention analysts and managers devote to AI-related topics at specific points in time. Empirically and theoretically, I show that these two channels exert opposing effects: firms focused on opportunity earn a negative AI risk premium, while those more affected by regulatory uncertainty earn a positive AI risk premium.</div><br>
     </div>
+
+2. ### **Physical Climate Risk, Asset Prices, and Labor Productivity**
+
+    <div class="pub-body" style="font-size:0.9em; margin-top:0.5em;">
+    <!-- <br> -->
+    <!-- <strong>Presentations:</strong> 2026 AFA PhD Poster Session (scheduled); 2025 OSU Fisher AI in Business Conference; 2025 SFA (scheduled); 2025 Hetergeneous Agents in Asset Pricing; 2025 Finance Theory Group<br> -->
+    <br>
+    <strong>Abstract:</strong> <div style="text-align: justify;">This paper introduces a Composite Exposure Index that quantifies firms’ physical climate risk exposure by drawing on a novel plant-level dataset and aggregating it to the firm level. With this index, I first show that physical climate risk is systematically priced in the cross-section of stock returns, evidencing a significant “Composite Premium” associated with physical climate risk in asset valuation. Second, I find that, for firms with high ex-ante exposure to physical climate risk, ex-post natural disasters negatively affect labor productivity and tangible assets, while positively affect intangible assets.</div>
+    </div>
+
 
 ## Book Chapters
 
