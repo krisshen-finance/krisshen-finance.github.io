@@ -12,7 +12,7 @@ author_profile: true
 
    <div class="pub-body" style="font-size:0.9em; margin-top:0.5em;">
      <strong>Abstract:</strong> <div style="text-align: justify;">Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</div><br>
-  <br><strong>Media Coverage:</strong>  <a href="https://corpgov.law.harvard.edu/2025/04/02/are-there-too-few-publicly-listed-firms-in-the-us/" target="_blank">Harvard Law School Forum on Corporate Governance</a>
+  <br><strong>Coverage:</strong>  <a href="https://corpgov.law.harvard.edu/2025/04/02/are-there-too-few-publicly-listed-firms-in-the-us/" target="_blank">Harvard Law School Forum on Corporate Governance</a>; <a href="https://www.forbes.com/sites/shivaramrajgopal/2025/06/08/have-reporting-burdens-led-to-more-firms-staying-private/" target="_blank">Forbes</a>; <a href="https://www.congress.gov/crs-product/R48521" target="_blank">Congressional Research Service (CRS) Report, Library of Congress</a>
    </div>
 
 
