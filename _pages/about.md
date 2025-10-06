@@ -26,9 +26,6 @@ I hold a B.A. in Economics and a B.S. in Mathematics from Wuhan University, and 
 ## Contact
 Email: <a href="mailto:shen.1732@osu.edu" target="_blank">shen.1732@osu.edu</a>
 
-## Recent Activity
-I am serving as a PhD Coordinator for the <a href="https://professorcastillo.github.io/FisherAIB2025/conference-main.html" target="_blank">2025 AI in Business Conference</a> this October 2nd and 3rd.
-
 <!-- 
 ## Research Interests
 - Corporate Finance
