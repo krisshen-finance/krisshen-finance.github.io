@@ -29,6 +29,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Kris Shen",
+  "alternateName": "Kris Shen Finance",
   "url": "{{ site.url }}",
   "sameAs": [
     {% if site.author.links %}
@@ -52,7 +53,9 @@
       "name": "Wuhan University"
     }
   ],
-  "email": "shen.1732@osu.edu"
+  "email": "shen.1732@osu.edu",
+  "image": "{{ site.url }}/images/profile.png",
+  "description": "PhD candidate in Finance at The Ohio State University, Fisher College of Business"
 }
 </script>
 <!-- WebSite structured data to reinforce site name -->
@@ -61,11 +64,22 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Kris Shen",
+  "alternateName": "Kris Shen - Finance PhD",
   "url": "{{ site.url }}",
-  "alternateName": "Kris Shen Finance",
+  "author": {
+    "@type": "Person",
+    "name": "Kris Shen"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Kris Shen"
+  },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "{{ site.url }}/search?q={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   }
 }
