@@ -13,8 +13,8 @@ author_profile: true
 - **2025 SFA**
   - <span style="color: #52adc8;">How do retail investors use order flow data?</span><br>
     (by Philipp Chapkovski, Mariana Khapko, and Marius Zoican)<br>
-    <a href="/files/SFA_Discussion_Kris.pdf" target="_blank" class="disc-btn">Discussion Slides</a>&nbsp;
-    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5160381" target="_blank" class="disc-btn">SSRN</a>
+    <a href="/files/SFA_Discussion_Kris.pdf" target="_blank" style="display:inline-block;padding:2px 10px;border:1px solid #52adc8;border-radius:3px;color:#52adc8;font-size:0.82em;text-decoration:none;">Discussion Slides</a>&nbsp;
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5160381" target="_blank" style="display:inline-block;padding:2px 10px;border:1px solid #52adc8;border-radius:3px;color:#52adc8;font-size:0.82em;text-decoration:none;">SSRN</a>
 
 <!-- 
 ## Editorial Activities
