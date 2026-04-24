@@ -9,7 +9,12 @@ author_profile: true
 - **PhD Coordinator**, <a href="https://professorcastillo.github.io/FisherAIB2025/conference-main.html" target="_blank">2025 AI in Business Conference</a>, October 2-3, 2025
 
 ## Conference Discussions
+
 - **2025 SFA**
+  - <span style="color: #52adc8;">How do retail investors use order flow data?</span><br>
+    (by Philipp Chapkovski, Mariana Khapko, and Marius Zoican)<br>
+    <a href="/files/SFA_Discussion_Kris.pdf" target="_blank" class="disc-btn">Discussion Slides</a>&nbsp;
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5160381" target="_blank" class="disc-btn">SSRN</a>
 
 <!-- 
 ## Editorial Activities
