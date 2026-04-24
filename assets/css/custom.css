@@ -43,6 +43,17 @@
   text-decoration: none !important;
 }
 
+/* Consistent blue focus outline sitewide */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+  outline: 2px solid #52adc8 !important;
+  outline-offset: 2px !important;
+}
+
 /* Make abstract text smaller */
 .abstract-paragraph {
   font-size: 0.85em !important;
