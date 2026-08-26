@@ -290,18 +290,50 @@ html[data-theme="dark"] .archive a:hover { color: #a3dcec; }
 
 .sidebar { font-family: var(--ks-sans); }
 
-.author__avatar img {
-  border-radius: 50% !important;
-  border: 1px solid var(--ks-rule-strong) !important;
-  padding: 5px !important;
-  box-shadow: var(--ks-shadow);
+/* Portrait: a true circle, cropped close on the face.
+   The source photo is 1184x864 landscape, so border-radius alone gives an
+   ellipse. Instead the wrapper is a square window with overflow clipped, and
+   the image is oversized and offset inside it to frame a 510px square of the
+   original centred on the face (source box x 403-913, y 136-646).
+   Percentages below are that box expressed against the window:
+     width  1184/510, left -403/510, top -136/510. */
+div.author__avatar {
+  position: relative;
+  width: 60%;
+  min-width: 120px;
+  max-width: 190px;
+  margin: 6px auto 1.4rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px var(--global-bg-color),
+              0 0 0 6px var(--ks-rule-strong);
+}
+
+div.author__avatar img {
+  position: absolute !important;
+  width: 232.16% !important;
+  height: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  left: -79.02% !important;
+  top: -26.67% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  div.author__avatar { max-width: 210px; }
 }
 
 @media screen and (min-width: 925px) {
-  .author__avatar img {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
+  div.author__avatar {
+    width: calc(100% - 12px);
+    max-width: none;
+    margin: 6px auto 1.5rem;
   }
 }
 
@@ -435,7 +467,6 @@ hr.ks-rule-short {
 .is-home .sidebar .author__name,
 .is-home .sidebar .author__bio { display: none; }
 
-.is-home .sidebar .author__avatar img { margin-bottom: 1.5rem !important; }
 
 /* --------------------------------------------------------------------------
    7. Paper cards
@@ -850,7 +881,12 @@ a:focus:not(:focus-visible) { outline: none !important; }
     z-index: auto !important;
   }
 
-  .author__urls::before { display: none !important; }
+  /* The theme draws a dropdown pointer here (its ::after is a hardcoded
+     #fff triangle, which shows up as a white notch in dark mode). With the
+     list always open there is nothing to point at. */
+  .author__urls::before,
+  .author__urls::after { display: none !important; }
+
   .author__urls li { text-align: center; }
 }
 
