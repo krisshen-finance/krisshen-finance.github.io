@@ -1,72 +1,872 @@
-/* Custom styles for research page */
+/* ==========================================================================
+   Kris Shen — site design layer
+   Loaded after main.css, so everything here wins.
 
-/* Paper titles */
-.pub-list h3 {
-  color: #52adc8;
-  font-size: 1.2em;
+   Palette is unchanged: #52adc8 remains the accent, #2f7f93 the hover.
+   Everything else here is structure, typography and spacing.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Accent — the existing site blue, untouched */
+  --ks-accent:        #52adc8;
+  --ks-accent-deep:   #2f7f93;
+  --ks-accent-ink:    #24707f;
+  --ks-accent-wash:   rgba(82, 173, 200, 0.08);
+  --ks-accent-edge:   rgba(82, 173, 200, 0.42);
+
+  /* Neutrals, tuned slightly cool so they sit with the blue */
+  --ks-ink:           #16242b;  /* headings */
+  --ks-body:          #3c4a52;  /* running text */
+  --ks-muted:         #6c7b84;  /* secondary text */
+  --ks-faint:         #8d9aa2;  /* labels */
+  --ks-rule:          #e7edf0;  /* hairlines */
+  --ks-rule-strong:   #d5dfe4;
+  --ks-surface:       #f8fbfc;  /* cards */
+  --ks-surface-2:     #eef5f8;  /* pills */
+  --ks-shadow:        0 1px 2px rgba(22, 36, 43, 0.04);
+
+  --ks-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --ks-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* One frame for the whole site: the masthead, the home two-column
+     layout and the section pages all align to these edges. */
+  --ks-frame:  42rem;    /* content width */
+  --ks-gutter: 1.5rem;   /* breathing room outside the frame */
+  --ks-side:   12.5rem;  /* home sidebar column */
+  --ks-split:  2.5rem;   /* gap between sidebar and text column */
 }
 
-/* Co-author and other inline links */
-.pub-list li a {
-  color: #52adc8;
+html[data-theme="dark"] {
+  --ks-ink:           #f2f6f8;
+  --ks-body:          #c9d4da;
+  --ks-muted:         #9fadb5;
+  --ks-faint:         #849099;
+  --ks-rule:          #333c41;
+  --ks-rule-strong:   #444e54;
+  --ks-surface:       #2b3134;
+  --ks-surface-2:     #262c2f;
+  --ks-accent-wash:   rgba(82, 173, 200, 0.12);
+  --ks-accent-edge:   rgba(82, 173, 200, 0.38);
+  --ks-shadow:        none;
 }
 
-.pub-list li a:hover {
-  color: #2f7f93;
+/* Deepen the default dark background: #474747 washed everything out.
+   The blue is untouched — only the neutral ground moves. */
+html[data-theme="dark"] {
+  --global-bg-color:        #232729;
+  --global-base-color:      #232729;
+  --global-footer-bg-color: #1d2123;
+  --global-border-color:    #3a4245;
+  --global-text-color:      #c9d4da;
+  --global-link-color:      #6cc3dc;
 }
 
-/* Keep paper title links primary (overrides the rule above) */
-.pub-list h3 a {
-  color: #52adc8;
+/* --------------------------------------------------------------------------
+   2. Base typography
+   -------------------------------------------------------------------------- */
+
+body {
+  font-family: var(--ks-sans);
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--ks-body);
+  letter-spacing: 0.002em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.pub-list h3 a:hover {
-  color: #2f7f93;
+h1, h2, h3, h4, h5, h6,
+.page__title, .archive__item-title, .author__name {
+  font-family: var(--ks-serif);
+  color: var(--ks-ink);
+  font-weight: 600;
+  letter-spacing: -0.006em;
 }
 
-/* Discussion entry buttons */
-.disc-btn {
-  display: inline-block !important;
-  padding: 2px 10px !important;
-  border: 1px solid #52adc8 !important;
-  border-radius: 3px !important;
-  color: #52adc8 !important;
-  font-size: 0.82em !important;
+.page__content p,
+.page__content li,
+.archive p,
+.archive li {
+  color: var(--ks-body);
+}
+
+.page__content strong,
+.archive strong { color: var(--ks-ink); font-weight: 600; }
+
+/* Links: no permanent underline, a hairline that grows on hover */
+.page__content a,
+.archive a,
+.page__content a:visited,
+.archive a:visited {
+  color: var(--ks-accent-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ks-accent-edge);
+  transition: color 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.page__content a:hover,
+.archive a:hover {
+  color: var(--ks-accent-deep);
+  border-bottom-color: var(--ks-accent);
+  text-decoration: none;
+}
+
+html[data-theme="dark"] .page__content a,
+html[data-theme="dark"] .archive a,
+html[data-theme="dark"] .page__content a:visited,
+html[data-theme="dark"] .archive a:visited { color: #7cc9df; }
+
+html[data-theme="dark"] .page__content a:hover,
+html[data-theme="dark"] .archive a:hover { color: #a3dcec; }
+
+/* --------------------------------------------------------------------------
+   3. Masthead
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  border-bottom: 1px solid var(--ks-rule);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+}
+
+.masthead::after { display: none; }
+
+.masthead__inner-wrap {
+  padding: 0.85em var(--ks-gutter) !important;
+  font-family: var(--ks-sans);
+  max-width: calc(var(--ks-frame) + 2 * var(--ks-gutter)) !important;
+  margin: 0 auto !important;
+}
+
+.greedy-nav { background: transparent; }
+.greedy-nav .visible-links li { background: transparent; }
+.masthead__menu-item { background-color: transparent; }
+
+/* Wordmark */
+.greedy-nav .visible-links .masthead__menu-item--lg a,
+.masthead__menu-item--lg a {
+  font-family: var(--ks-serif) !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.012em !important;
+  text-transform: none !important;
+  color: var(--ks-ink) !important;
+}
+
+/* Nav links: small, tracked, quiet */
+.greedy-nav .visible-links a,
+.greedy-nav .hidden-links a {
+  font-size: 0.775rem;
+  font-weight: 500;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  color: var(--ks-muted) !important;
+  padding-bottom: 3px;
+  transition: color 0.16s ease;
+}
+
+.greedy-nav .visible-links a:hover,
+.greedy-nav .hidden-links a:hover {
+  color: var(--ks-ink) !important;
+}
+
+/* Kill the theme's sliding underline; use a static hairline instead */
+.greedy-nav a::before { display: none !important; }
+
+.greedy-nav .visible-links a { position: relative; }
+
+.greedy-nav .visible-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: var(--ks-accent);
+  transition: right 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.greedy-nav .visible-links a:hover::after { right: 0; }
+.masthead__menu-item--lg a::after,
+#theme-toggle a::after { display: none !important; }
+
+/* Theme toggle */
+#theme-toggle a { color: var(--ks-faint) !important; cursor: pointer; }
+#theme-toggle a:hover { color: var(--ks-accent) !important; }
+
+/* --------------------------------------------------------------------------
+   4. Page frame + titles
+   -------------------------------------------------------------------------- */
+
+/* #main carries the frame; everything inside aligns to its content edges. */
+#main {
+  max-width: calc(var(--ks-frame) + 2 * var(--ks-gutter)) !important;
+  padding: 0 var(--ks-gutter) !important;
+  margin: 2rem auto 0 !important;
+  float: none !important;
+}
+
+/* Home: portrait column and text column, side by side inside the frame */
+@media screen and (min-width: 925px) {
+  .sidebar {
+    left: calc(50% - var(--ks-frame) / 2) !important;
+    width: var(--ks-side) !important;
+    padding-right: 0 !important;
+  }
+
+  .page {
+    float: none !important;
+    margin-left: calc(var(--ks-side) + var(--ks-split)) !important;
+    margin-right: 0 !important;
+    width: calc(var(--ks-frame) - var(--ks-side) - var(--ks-split)) !important;
+    max-width: calc(var(--ks-frame) - var(--ks-side) - var(--ks-split)) !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Section pages (research / teaching / academic service) */
+.archive--wide {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+.page__title,
+.archive .page__title {
+  font-size: 2.15rem;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.15;
+  margin: 1.9rem 0 0;
+  text-align: left;
+}
+
+/* A short accent rule under section-page titles */
+.archive--wide .page__title::after {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin: 0.95rem 0 0;
+  background: var(--ks-accent);
+}
+
+.archive--wide .page__title { margin-bottom: 2.6rem; }
+
+.is-home .page__title { font-size: 2.3rem; margin-bottom: 0.45rem; }
+
+/* Section headings, with the hairline the theme already wanted */
+.page__content h2,
+.archive h2 {
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: -0.004em;
+  color: var(--ks-ink);
+  margin: 3rem 0 1.35rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--ks-rule);
+}
+
+.page__content h2:first-child,
+.archive h2:first-child { margin-top: 0; }
+
+.page__content h3,
+.archive h3 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  margin: 1.8rem 0 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Sidebar / author profile
+   -------------------------------------------------------------------------- */
+
+.sidebar { font-family: var(--ks-sans); }
+
+.author__avatar img {
+  border-radius: 50% !important;
+  border: 1px solid var(--ks-rule-strong) !important;
+  padding: 5px !important;
+  box-shadow: var(--ks-shadow);
+}
+
+@media screen and (min-width: 925px) {
+  .author__avatar img {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+}
+
+.sidebar .author__name,
+.author__name {
+  font-family: var(--ks-serif) !important;
+  font-size: 1.42rem !important;
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  color: var(--ks-ink);
+  margin-bottom: 0.35rem !important;
+}
+
+.author__bio {
+  font-family: var(--ks-sans);
+  font-size: 0.815rem !important;
+  line-height: 1.55 !important;
+  color: var(--ks-muted);
+  max-width: 20rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.author__urls-wrapper { font-family: var(--ks-sans); }
+
+.author__urls {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+.author__urls li {
+  font-size: 0.8rem;
+  letter-spacing: 0.012em;
+  color: var(--ks-muted);
+  padding: 0.28rem 0;
+  border: none;
+}
+
+.author__urls a {
+  color: var(--ks-muted) !important;
   text-decoration: none !important;
-  margin-top: 5px !important;
-  line-height: 1.8 !important;
+  border-bottom: none !important;
+  transition: color 0.16s ease;
 }
 
+.author__urls a:hover { color: var(--ks-accent-deep) !important; }
+.author__urls .fa, .author__urls .fas, .author__urls .ai { color: var(--ks-faint); }
+.author__urls a:hover .fa,
+.author__urls a:hover .fas,
+.author__urls a:hover .ai { color: var(--ks-accent); }
+
+/* --------------------------------------------------------------------------
+   6. Home page
+   -------------------------------------------------------------------------- */
+
+/* Role line, italic serif in the accent */
+.ks-role {
+  font-family: var(--ks-serif);
+  font-style: italic;
+  font-size: 1.06rem;
+  color: var(--ks-accent-ink);
+  margin: 0 0 0.32rem !important;
+}
+
+html[data-theme="dark"] .ks-role { color: #7cc9df; }
+
+/* Affiliation line: small, tracked, quiet */
+.ks-eyebrow {
+  font-family: var(--ks-sans);
+  font-size: 0.655rem;
+  font-weight: 500;
+  letter-spacing: 0.115em;
+  line-height: 1.85;
+  text-transform: uppercase;
+  color: var(--ks-faint);
+  margin: 0 !important;
+}
+
+hr.ks-rule-short {
+  width: 2.25rem;
+  border-top: 2px solid var(--ks-accent);
+  margin: 1.5rem 0 1.4rem;
+}
+
+.ks-lede {
+  font-size: 0.985rem;
+  line-height: 1.75;
+  color: var(--ks-body);
+  max-width: 38rem;
+}
+
+/* Research-interest list with hairline markers */
+.ks-list {
+  list-style: none !important;
+  margin: 0.4rem 0 0 !important;
+  padding: 0 !important;
+}
+
+.ks-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin: 0 0 0.42rem;
+  font-size: 0.945rem;
+  color: var(--ks-body);
+}
+
+.ks-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.62rem;
+  height: 1px;
+  background: var(--ks-accent);
+}
+
+.ks-contact {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.945rem;
+  margin: 0.4rem 0 0 !important;
+}
+
+.ks-contact .ks-label { margin: 0; }
+
+/* The sidebar already carries the portrait and links; the name and bio are
+   stated in the main column, so drop the duplicates on the home page. */
+.is-home .sidebar .author__name,
+.is-home .sidebar .author__bio { display: none; }
+
+.is-home .sidebar .author__avatar img { margin-bottom: 1.5rem !important; }
+
+/* --------------------------------------------------------------------------
+   7. Paper cards
+   -------------------------------------------------------------------------- */
+
+.pub-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pub-list > li { margin: 0 0 0.9rem; padding: 0; }
+
+.pub-card {
+  position: relative;
+  background: var(--ks-surface);
+  border: 1px solid var(--ks-rule);
+  border-left: 3px solid var(--ks-accent-edge);
+  border-radius: 5px;
+  padding: 1.3rem 1.5rem;
+  margin: 0 0 0.9rem;
+  box-shadow: var(--ks-shadow);
+  transition: border-left-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-card:hover {
+  border-left-color: var(--ks-accent);
+  box-shadow: 0 2px 10px rgba(22, 36, 43, 0.055);
+}
+
+html[data-theme="dark"] .pub-card:hover { box-shadow: none; }
+
+.pub-card .pub-card__title,
+.disc .disc__title {
+  font-family: var(--ks-serif);
+  font-size: 1.09rem;
+  font-weight: 600;
+  line-height: 1.34;
+  letter-spacing: -0.008em;
+  color: var(--ks-ink);
+  margin: 0 0 0.4rem !important;
+}
+
+.pub-card__title a {
+  color: var(--ks-ink) !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+.pub-card__title a:hover {
+  color: var(--ks-accent-deep) !important;
+  border-bottom-color: var(--ks-accent-edge) !important;
+}
+
+html[data-theme="dark"] .pub-card__title a:hover { color: #7cc9df !important; }
+
+/* Co-author / venue line */
+.pub-card .pub-card__meta {
+  font-size: 0.855rem;
+  line-height: 1.55;
+  color: var(--ks-muted);
+  margin: 0 0 0.2rem !important;
+}
+
+.pub-card__meta a { color: var(--ks-muted) !important; border-bottom-color: var(--ks-rule-strong) !important; }
+.pub-card__meta a:hover { color: var(--ks-accent-deep) !important; border-bottom-color: var(--ks-accent) !important; }
+
+/* Journal / status line, in the accent, italic */
+.pub-card .pub-card__venue {
+  font-family: var(--ks-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ks-accent-ink);
+  margin: 0.15rem 0 0 !important;
+}
+
+html[data-theme="dark"] .pub-card__venue { color: #7cc9df; }
+
+/* --------------------------------------------------------------------------
+   8. Pill links  (Internet Appendix, SSRN, slides, …)
+   -------------------------------------------------------------------------- */
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.85rem 0 0;
+}
+
+.pill,
+.disc-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.32rem;
+  padding: 0.24rem 0.7rem !important;
+  border: 1px solid var(--ks-rule-strong) !important;
+  border-radius: 999px !important;
+  background: var(--ks-surface-2);
+  color: var(--ks-accent-ink) !important;
+  font-family: var(--ks-sans) !important;
+  font-size: 0.715rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.045em !important;
+  line-height: 1.65 !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: all 0.16s ease;
+}
+
+.pill:hover,
 .disc-btn:hover {
-  background-color: #52adc8 !important;
+  background: var(--ks-accent) !important;
+  border-color: var(--ks-accent) !important;
   color: #fff !important;
   text-decoration: none !important;
 }
 
-/* Consistent blue focus outline sitewide */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus,
-[tabindex]:focus {
-  outline: 2px solid #52adc8 !important;
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .disc-btn {
+  background: rgba(82, 173, 200, 0.10);
+  color: #7cc9df !important;
+  border-color: rgba(82, 173, 200, 0.30) !important;
+}
+
+html[data-theme="dark"] .pill:hover,
+html[data-theme="dark"] .disc-btn:hover {
+  background: var(--ks-accent) !important;
+  color: #16242b !important;
+}
+
+/* Muted variant for non-link chips */
+.pill--quiet {
+  color: var(--ks-muted) !important;
+  background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   9. Abstract + labelled meta blocks
+   -------------------------------------------------------------------------- */
+
+.pub-card__body { margin: 0.9rem 0 0; }
+
+.ks-label {
+  display: block;
+  font-family: var(--ks-sans);
+  font-size: 0.655rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ks-faint);
+  margin: 0 0 0.3rem;
+}
+
+.pub-card p, .disc p, .entry p { margin-bottom: 0; }
+
+.ks-note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.55rem;
+  align-items: baseline;
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: var(--ks-muted);
+  margin: 0.5rem 0 0;
+}
+
+.ks-note > .ks-label {
+  margin: 0;
+  white-space: nowrap;
+  padding-top: 0.08rem;
+}
+
+.pub-card .ks-note { margin: 0.5rem 0 0 !important; }
+.pub-card .ks-note + .ks-note { margin-top: 0.35rem !important; }
+
+.ks-note a { color: var(--ks-muted) !important; border-bottom-color: var(--ks-rule-strong) !important; }
+.ks-note a:hover { color: var(--ks-accent-deep) !important; border-bottom-color: var(--ks-accent-edge) !important; }
+
+.abstract {
+  font-size: 0.855rem;
+  line-height: 1.66;
+  color: var(--ks-muted);
+  text-align: justify;
+  hyphens: auto;
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--ks-rule);
+  margin: 0.35rem 0 0;
+}
+
+/* Collapsible abstract */
+details.abstract-toggle { margin: 0.85rem 0 0; }
+
+details.abstract-toggle > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.24rem 0.7rem;
+  border: 1px solid var(--ks-rule-strong);
+  border-radius: 999px;
+  background: var(--ks-surface-2);
+  color: var(--ks-accent-ink);
+  font-size: 0.715rem;
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  transition: all 0.16s ease;
+}
+
+details.abstract-toggle > summary::-webkit-details-marker { display: none; }
+details.abstract-toggle > summary:hover {
+  background: var(--ks-accent);
+  border-color: var(--ks-accent);
+  color: #fff;
+}
+
+html[data-theme="dark"] details.abstract-toggle > summary {
+  background: rgba(82, 173, 200, 0.10);
+  color: #7cc9df;
+  border-color: rgba(82, 173, 200, 0.30);
+}
+
+html[data-theme="dark"] details.abstract-toggle > summary:hover {
+  background: var(--ks-accent);
+  color: #16242b;
+}
+
+details.abstract-toggle > summary::before { content: "+"; font-weight: 500; }
+details.abstract-toggle[open] > summary::before { content: "–"; }
+details.abstract-toggle[open] > summary { margin-bottom: 0.65rem; }
+
+/* --------------------------------------------------------------------------
+   10. Teaching + service entries
+   -------------------------------------------------------------------------- */
+
+.entry {
+  padding: 0 0 0 1.1rem;
+  border-left: 1px solid var(--ks-rule);
+  margin: 0 0 1.6rem;
+}
+
+.entry .entry__org {
+  font-family: var(--ks-serif);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ks-ink);
+  margin: 0 0 0.15rem !important;
+}
+
+.entry .entry__role {
+  font-size: 0.905rem;
+  line-height: 1.62;
+  color: var(--ks-body);
+  margin: 0 !important;
+}
+
+.entry .entry__aside {
+  font-size: 0.79rem;
+  letter-spacing: 0.02em;
+  color: var(--ks-faint);
+  margin: 0.35rem 0 0 !important;
+}
+
+.entry__aside strong { color: var(--ks-accent-ink); font-weight: 600; }
+html[data-theme="dark"] .entry__aside strong { color: #7cc9df; }
+
+/* Course list inside a teaching entry */
+.course-list {
+  list-style: none !important;
+  margin: 0.35rem 0 0 !important;
+  padding: 0 !important;
+}
+
+.course-list li {
+  position: relative;
+  padding-left: 1.05rem;
+  margin: 0 0 0.28rem;
+  font-size: 0.895rem;
+  line-height: 1.55;
+  color: var(--ks-body);
+}
+
+.course-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.66em;
+  width: 0.5rem;
+  height: 1px;
+  background: var(--ks-accent-edge);
+}
+
+.course-list .course-name { color: var(--ks-muted); }
+
+/* Discussion entries on the service page */
+.disc {
+  background: var(--ks-surface);
+  border: 1px solid var(--ks-rule);
+  border-left: 3px solid var(--ks-accent-edge);
+  border-radius: 5px;
+  padding: 1.15rem 1.4rem;
+  margin: 0 0 0.9rem;
+  box-shadow: var(--ks-shadow);
+  transition: border-left-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.disc:hover { border-left-color: var(--ks-accent); }
+
+.disc .disc__title { font-size: 1rem; }
+
+.disc .disc__authors {
+  font-size: 0.845rem;
+  color: var(--ks-muted);
+  margin: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   11. Footer + misc
+   -------------------------------------------------------------------------- */
+
+.page__footer {
+  border-top: 1px solid var(--ks-rule);
+  background: transparent !important;
+  font-family: var(--ks-sans);
+  color: var(--ks-faint);
+}
+
+.page__footer footer {
+  padding: 1.6rem var(--ks-gutter);
+  max-width: calc(var(--ks-frame) + 2 * var(--ks-gutter));
+  margin: 0 auto;
+  float: none;
+}
+.page__footer a { color: var(--ks-muted) !important; text-decoration: none !important; }
+.page__footer a:hover { color: var(--ks-accent-deep) !important; }
+.page__footer .copyright,
+.page__footer p { font-size: 0.74rem; letter-spacing: 0.035em; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--ks-rule);
+  margin: 2.4rem 0;
+}
+
+/* Consistent blue focus ring */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--ks-accent) !important;
   outline-offset: 2px !important;
+  border-radius: 2px;
 }
 
-/* Make abstract text smaller */
-.abstract-paragraph {
-  font-size: 0.85em !important;
-  line-height: 1.5 !important;
-  display: inline-block;
+a:focus:not(:focus-visible) { outline: none !important; }
+
+/* --------------------------------------------------------------------------
+   12. Mobile navigation + sidebar
+   -------------------------------------------------------------------------- */
+
+/* Hamburger: quiet hairline bars on a transparent field */
+.greedy-nav button {
+  background-color: transparent !important;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 4px;
+  transition: background-color 0.16s ease;
 }
 
-/* Make the "Abstract:" label smaller as well */
-.page__content p strong:contains("Abstract:") {
-  font-size: 0.85em !important;
+.greedy-nav button:hover { background-color: var(--ks-surface-2) !important; }
+
+.navicon,
+.navicon::before,
+.navicon::after {
+  background: var(--ks-ink) !important;
+  height: 1.5px !important;
+  width: 20px !important;
+  border-radius: 1px;
 }
 
-/* Direct selector for Abstract label */
-.page__content p strong[data-text="Abstract:"] {
-  font-size: 0.85em !important;
+.navicon::before { top: -6px !important; }
+.navicon::after  { bottom: -6px !important; }
+.close .navicon  { background: transparent !important; }
+
+/* Overflow menu */
+.greedy-nav .hidden-links {
+  background: var(--global-bg-color);
+  border: 1px solid var(--ks-rule);
+  border-radius: 5px;
+  box-shadow: 0 6px 20px rgba(22, 36, 43, 0.10);
+  padding: 0.35rem 0;
+}
+
+.greedy-nav .hidden-links li { background: transparent; border: 0; }
+.greedy-nav .hidden-links a { padding: 0.45rem 1rem; }
+.greedy-nav .hidden-links::before { display: none; }
+
+/* On narrow screens, show the contact links directly instead of
+   hiding them behind the theme's unlabelled "Follow" button. */
+@media screen and (max-width: 1023px) {
+  .author__urls-wrapper button { display: none !important; }
+
+  .author__urls {
+    display: block !important;
+    position: relative !important;
+    right: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: auto !important;
+  }
+
+  .author__urls::before { display: none !important; }
+  .author__urls li { text-align: center; }
+}
+
+/* --------------------------------------------------------------------------
+   13. Small screens
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 924px) {
+  #main { padding: 0 1.25rem !important; }
+  .masthead__inner-wrap { padding: 0.7em 1.25rem !important; }
+  .page__title, .archive .page__title { font-size: 1.85rem; }
+  .pub-card, .disc { padding: 1.1rem 1.15rem; }
+  .abstract { text-align: left; }
+  .masthead__inner-wrap { padding: 0.7em 1.1em; }
+}
+
+@media screen and (max-width: 600px) {
+  .ks-note { grid-template-columns: 1fr; gap: 0.15rem; }
 }

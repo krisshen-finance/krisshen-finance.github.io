@@ -6,15 +6,25 @@ author_profile: true
 ---
 
 ## Conference Organization
-- **PhD Coordinator**, <a href="https://professorcastillo.github.io/FisherAIB2025/conference-main.html" target="_blank">2025 AI in Business Conference</a>, October 2-3, 2025
+
+<div class="entry">
+  <p class="entry__org">2025 AI in Business Conference</p>
+  <p class="entry__role">PhD Coordinator — <a href="https://professorcastillo.github.io/FisherAIB2025/conference-main.html" target="_blank">Fisher College of Business</a></p>
+  <p class="entry__aside">October 2–3, 2025</p>
+</div>
 
 ## Conference Discussions
 
-- **2025 SFA**
-  - <span style="color: #52adc8;">How do retail investors use order flow data?</span><br>
-    (by Philipp Chapkovski, Mariana Khapko, and Marius Zoican)<br>
-    <a href="/files/SFA_Discussion_Kris.pdf" target="_blank" style="display:inline-block;padding:2px 10px;border:1px solid #52adc8;border-radius:3px;color:#52adc8;font-size:0.82em;text-decoration:none;">Discussion Slides</a>&nbsp;
-    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5160381" target="_blank" style="display:inline-block;padding:2px 10px;border:1px solid #52adc8;border-radius:3px;color:#52adc8;font-size:0.82em;text-decoration:none;">SSRN</a>
+<p class="ks-label" style="margin-top:1.6rem;">2025 SFA</p>
+
+<div class="disc">
+  <p class="disc__title">How do retail investors use order flow data?</p>
+  <p class="disc__authors">by Philipp Chapkovski, Mariana Khapko, and Marius Zoican</p>
+  <div class="pill-row">
+    <a class="pill" href="/files/SFA_Discussion_Kris.pdf" target="_blank">Discussion Slides</a>
+    <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5160381" target="_blank">SSRN</a>
+  </div>
+</div>
 
 <!-- 
 ## Editorial Activities
@@ -23,9 +33,7 @@ author_profile: true
 
 ## Professional Memberships
 - [Professional Organization], [Years]
-- [Professional Organization], [Years]
 
 ## Conference Presentations
-- [Conference Name], [Location], [Date]
 - [Conference Name], [Location], [Date]
 -->
