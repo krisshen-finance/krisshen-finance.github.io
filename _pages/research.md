@@ -33,7 +33,7 @@ author_profile: true
   </div>
 </div>
 
-## Work in Progress
+## Working Papers
 
 <div class="pub-card">
   <h3 class="pub-card__title">Artificial Intelligence, Opportunity, and Regulatory Uncertainty: Implications for Asset Pricing</h3>
