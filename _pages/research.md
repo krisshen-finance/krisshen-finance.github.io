@@ -62,10 +62,6 @@ author_profile: true
   {% endcomment %}
 </div>
 
-<div class="pub-card">
-  <h3 class="pub-card__title">Physical Climate Risk, Asset Prices, and Labor Productivity</h3>
-</div>
-
 ## Book Chapters
 
 <div class="pub-card">
