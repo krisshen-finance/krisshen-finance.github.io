@@ -551,9 +551,15 @@ html[data-theme="dark"] .pub-card__venue { color: #7cc9df; }
 .pill-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 0.4rem;
   margin: 0.85rem 0 0;
 }
+
+/* The abstract disclosure sits in the row alongside the link pills; once
+   open it claims a full line of its own so the text runs the card width. */
+.pill-row > details.abstract-toggle { margin: 0; }
+.pill-row > details.abstract-toggle[open] { flex: 1 0 100%; }
 
 .pill,
 .disc-btn {

@@ -13,10 +13,13 @@ author_profile: true
   <p class="pub-card__venue">Financial Review, 2025, 60, 317–329</p>
 
   <div class="pub-card__body">
+    <div class="pill-row">
+      <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5163070" target="_blank">SSRN</a>
     <details class="abstract-toggle">
       <summary>Abstract</summary>
       <div class="abstract">Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</div>
     </details>
+    </div>
 
     <p class="ks-note">
       <span class="ks-label">Coverage</span>
