@@ -40,7 +40,12 @@ author_profile: true
 
   <div class="pub-card__body">
     <div class="pill-row">
+      <a class="pill" href="https://ssrn.com/abstract=7405818" target="_blank">SSRN</a>
       <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
+      <details class="abstract-toggle">
+        <summary>Abstract</summary>
+        <div class="abstract">Do high stock valuations during the emergence of a general-purpose technology such as AI reflect price bubbles? I propose a new framework that measures the <em>AI premium gap</em>&mdash;the wedge between objective expected returns from full-information econometric benchmarks and subjective expected returns from analyst forecasts, for AI firms relative to non-AI firms. A negative gap is consistent with bubbles. From 2009 to 2024, the gap is positive. Applied to the dot-com era of the 1990s, the same framework yields a negative gap, consistent with a dot-com bubble. This contrast suggests the AI era differs fundamentally, highlighting the framework&rsquo;s broader applicability.</div>
+      </details>
     </div>
 
     <p class="ks-note">
