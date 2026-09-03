@@ -14,11 +14,11 @@ author_profile: true
 
   <div class="pub-card__body">
     <div class="pill-row">
-      <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5163070" target="_blank">SSRN</a>
       <details class="abstract-toggle">
         <summary>Abstract</summary>
         <div class="abstract">Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</div>
       </details>
+      <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5163070" target="_blank">SSRN</a>
     </div>
 
     <p class="ks-note">
@@ -40,12 +40,12 @@ author_profile: true
 
   <div class="pub-card__body">
     <div class="pill-row">
-      <a class="pill" href="https://ssrn.com/abstract=7405818" target="_blank">SSRN</a>
-      <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
       <details class="abstract-toggle">
         <summary>Abstract</summary>
         <div class="abstract">Do high stock valuations during the emergence of a general-purpose technology such as AI reflect price bubbles? I propose a new framework that measures the <em>AI premium gap</em>&mdash;the wedge between objective expected returns from full-information econometric benchmarks and subjective expected returns from analyst forecasts, for AI firms relative to non-AI firms. A negative gap is consistent with bubbles. From 2009 to 2024, the gap is positive. Applied to the dot-com era of the 1990s, the same framework yields a negative gap, consistent with a dot-com bubble. This contrast suggests the AI era differs fundamentally, highlighting the framework&rsquo;s broader applicability.</div>
       </details>
+      <a class="pill" href="https://ssrn.com/abstract=7405818" target="_blank">SSRN</a>
+      <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
     </div>
 
     <p class="ks-note">
