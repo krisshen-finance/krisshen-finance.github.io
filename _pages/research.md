@@ -36,30 +36,18 @@ author_profile: true
 ## Working Papers
 
 <div class="pub-card">
-  <h3 class="pub-card__title">Artificial Intelligence, Opportunity, and Regulatory Uncertainty: Implications for Asset Pricing</h3>
+  <h3 class="pub-card__title">AI Valuations: Bubble or Fundamentals?</h3>
 
   <div class="pub-card__body">
+    <div class="pill-row">
+      <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
+    </div>
+
     <p class="ks-note">
       <span class="ks-label">Presentations</span>
       <span>2026 AFA PhD Poster Session · 2025 OSU Fisher AI in Business Conference · 2025 SFA · 2025 Heterogeneous Agents in Asset Pricing · 2025 Finance Theory Group</span>
     </p>
   </div>
-
-  {% comment %}
-  ==================================================================
-  INTERNET APPENDIX — built and ready, deliberately not displayed.
-
-  The PDF itself is live and publicly linkable at
-  https://krisshen-finance.github.io/files/AI_Premium_Gap_IA_08262026.pdf
-  so it can be linked from SSRN right now.
-
-  To show the box on this page, delete the two Liquid comment lines
-  that wrap the markup below (the one above and the one below it).
-  ==================================================================
-  <div class="pill-row">
-    <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
-  </div>
-  {% endcomment %}
 </div>
 
 ## Book Chapters
