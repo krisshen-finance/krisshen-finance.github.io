@@ -5,6 +5,28 @@ permalink: /research/
 author_profile: true
 ---
 
+## Working Papers
+
+<div class="pub-card">
+  <h3 class="pub-card__title">AI Valuations: Bubble or Fundamentals?</h3>
+
+  <div class="pub-card__body">
+    <div class="pill-row">
+      <details class="abstract-toggle">
+        <summary>Abstract</summary>
+        <div class="abstract">Do high stock valuations during the emergence of a general-purpose technology such as AI reflect price bubbles? I propose a new framework that measures the <em>AI premium gap</em>&mdash;the wedge between objective expected returns from full-information econometric benchmarks and subjective expected returns from analyst forecasts, for AI firms relative to non-AI firms. A negative gap is consistent with bubbles. From 2009 to 2024, the gap is positive. Applied to the dot-com era of the 1990s, the same framework yields a negative gap, consistent with a dot-com bubble. This contrast suggests the AI era differs fundamentally, highlighting the framework&rsquo;s broader applicability.</div>
+      </details>
+      <a class="pill" href="https://ssrn.com/abstract=7405818" target="_blank">SSRN</a>
+      <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
+    </div>
+
+    <p class="ks-note">
+      <span class="ks-label">Presentations</span>
+      <span>2026 AFA PhD Poster Session · 2025 OSU Fisher AI in Business Conference · 2025 SFA · 2025 Heterogeneous Agents in Asset Pricing · 2025 Finance Theory Group</span>
+    </p>
+  </div>
+</div>
+
 ## Publications
 
 <div class="pub-card">
@@ -29,28 +51,6 @@ author_profile: true
     <p class="ks-note">
       <span class="ks-label">Congress.gov</span>
       <span><a href="https://www.congress.gov/crs-product/R48521" target="_blank">Congressional Research Service Report (2025)</a> · <a href="https://www.congress.gov/crs-product/R48885" target="_blank">Congressional Research Service Report (2026)</a></span>
-    </p>
-  </div>
-</div>
-
-## Working Papers
-
-<div class="pub-card">
-  <h3 class="pub-card__title">AI Valuations: Bubble or Fundamentals?</h3>
-
-  <div class="pub-card__body">
-    <div class="pill-row">
-      <details class="abstract-toggle">
-        <summary>Abstract</summary>
-        <div class="abstract">Do high stock valuations during the emergence of a general-purpose technology such as AI reflect price bubbles? I propose a new framework that measures the <em>AI premium gap</em>&mdash;the wedge between objective expected returns from full-information econometric benchmarks and subjective expected returns from analyst forecasts, for AI firms relative to non-AI firms. A negative gap is consistent with bubbles. From 2009 to 2024, the gap is positive. Applied to the dot-com era of the 1990s, the same framework yields a negative gap, consistent with a dot-com bubble. This contrast suggests the AI era differs fundamentally, highlighting the framework&rsquo;s broader applicability.</div>
-      </details>
-      <a class="pill" href="https://ssrn.com/abstract=7405818" target="_blank">SSRN</a>
-      <a class="pill" href="/files/AI_Premium_Gap_IA_08262026.pdf" target="_blank">Internet Appendix</a>
-    </div>
-
-    <p class="ks-note">
-      <span class="ks-label">Presentations</span>
-      <span>2026 AFA PhD Poster Session · 2025 OSU Fisher AI in Business Conference · 2025 SFA · 2025 Heterogeneous Agents in Asset Pricing · 2025 Finance Theory Group</span>
     </p>
   </div>
 </div>
