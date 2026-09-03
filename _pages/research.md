@@ -15,10 +15,10 @@ author_profile: true
   <div class="pub-card__body">
     <div class="pill-row">
       <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5163070" target="_blank">SSRN</a>
-    <details class="abstract-toggle">
-      <summary>Abstract</summary>
-      <div class="abstract">Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</div>
-    </details>
+      <details class="abstract-toggle">
+        <summary>Abstract</summary>
+        <div class="abstract">Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</div>
+      </details>
     </div>
 
     <p class="ks-note">
@@ -68,4 +68,11 @@ author_profile: true
   <h3 class="pub-card__title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-86354-7_9" target="_blank">Liquidity Management with Index Futures Contracts for Active Managers</a></h3>
   <p class="pub-card__meta">with <a href="https://sites.google.com/view/zhangshaojun/shaojun-zhang" target="_blank">Shaojun Zhang</a></p>
   <p class="pub-card__venue">Derivatives Applications in Asset Management: From Theory to Practice, Springer Nature, 2025</p>
+
+  <div class="pub-card__body">
+    <details class="abstract-toggle">
+      <summary>Abstract</summary>
+      <div class="abstract">Effective liquidity management is essential for active mutual funds, particularly those managing substantial assets in dynamic market environments. This chapter explores the critical role of stock-index futures contracts in liquidity management, offering practical tools and strategies for managing cash flows, meeting redemption demands, and maintaining market exposure. The discussion covers key techniques, including cash buffers, liquid assets, and advanced derivative strategies such as rolling futures contracts and mixed approaches using options and futures. Case studies illustrate how fund managers reinvest dividends, manage inflows and outflows, and optimize portfolio exposure under varying market conditions. Additionally, the chapter addresses challenges in liquidity management, including transaction costs, volatile markets, and regulatory uncertainty. By leveraging index futures and other derivatives, fund managers can achieve efficient liquidity management while preserving strategic objectives and investor confidence.</div>
+    </details>
+  </div>
 </div>
