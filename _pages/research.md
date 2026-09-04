@@ -8,7 +8,7 @@ author_profile: true
 ## Working Papers
 
 <div class="pub-card">
-  <h3 class="pub-card__title">AI Valuations: Bubble or Fundamentals?</h3>
+  <h3 class="pub-card__title"><a href="/files/ssrn-7405818.pdf" target="_blank">AI Valuations: Bubble or Fundamentals?</a></h3>
 
   <div class="pub-card__body">
     <div class="pill-row">
