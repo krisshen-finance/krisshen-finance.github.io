@@ -152,9 +152,16 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-analytics-4" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  # GoatCounter: privacy-friendly, no cookies, so no GDPR consent banner is needed.
+  # Put your site code here -- just the subdomain, e.g. "krisshen" for
+  # krisshen.goatcounter.com. Tracking stays off entirely while this is blank.
+  goatcounter:
+    code                 : ""
+  # Google Analytics was configured with the placeholder ID G-XXXXXXXXXX, which
+  # meant every pageview called out to Google and recorded nothing. Disabled.
   google:
-    tracking_id          : "G-XXXXXXXXXX"  # Replace XXXXXXXXXX with your actual GA4 measurement ID
+    tracking_id          : ""
 
 
 # Reading Files
