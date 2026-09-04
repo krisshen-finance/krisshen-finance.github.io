@@ -157,7 +157,7 @@ analytics:
   # Put your site code here -- just the subdomain, e.g. "krisshen" for
   # krisshen.goatcounter.com. Tracking stays off entirely while this is blank.
   goatcounter:
-    code                 : ""
+    code                 : "krisshen"
   # Google Analytics was configured with the placeholder ID G-XXXXXXXXXX, which
   # meant every pageview called out to Google and recorded nothing. Disabled.
   google:
