@@ -40,6 +40,10 @@ author:
   # picks the longest matching rule, so adding hl=en& in front makes this
   # profile uncrawlable to Googlebot.
   googlescholar    : "https://scholar.google.com/citations?user=c042eywAAAAJ"
+  # Authoritative profile pages for the same person. These go into the
+  # Person sameAs array so Google ties this site, the OSU page and the
+  # Scholar profile to one entity. Fisher already links back here.
+  institution_profile : "https://fisher.osu.edu/people/shen.1732"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : # "http://orcid.org/yourorcidurl"

@@ -33,9 +33,8 @@
   "name": "Kris Shen",
   "alternateName": "Kris Shen Finance",
   "url": "{{ site.url }}",
-  "sameAs": [{% if site.author.googlescholar %}
-    {{ site.author.googlescholar | jsonify }}{% endif %}
-  ],
+  {% capture sameas_raw %}{% if site.author.googlescholar %}{{ site.author.googlescholar }},{% endif %}{% if site.author.institution_profile %}{{ site.author.institution_profile }},{% endif %}{% endcapture %}
+  "sameAs": {{ sameas_raw | split: "," | jsonify }},
   "jobTitle": "PhD Candidate in Finance",
   "worksFor": {
     "@type": "CollegeOrUniversity",
