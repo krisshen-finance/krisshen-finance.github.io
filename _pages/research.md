@@ -58,7 +58,7 @@ author_profile: true
 ## Book Chapters
 
 <div class="pub-card">
-  <h3 class="pub-card__title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-86354-7_9" target="_blank">Liquidity Management with Index Futures Contracts for Active Managers</a></h3>
+  <h3 class="pub-card__title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-86354-7_9" target="_blank">Liquidity Management with Stock-Index Futures</a></h3>
   <p class="pub-card__meta">with <a href="https://sites.google.com/view/zhangshaojun/shaojun-zhang" target="_blank">Shaojun Zhang</a></p>
   <p class="pub-card__venue">Derivatives Applications in Asset Management: From Theory to Practice, Springer Nature, 2025</p>
 
