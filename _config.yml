@@ -173,6 +173,13 @@ include:
   - _pages
   - files
 exclude:
+  # Template tooling, not site content. It was being published and listed in
+  # sitemap.xml as /markdown_generator/.
+  - markdown_generator
+  - talkmap
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - talkmap.py
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
