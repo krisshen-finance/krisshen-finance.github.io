@@ -26,3 +26,5 @@ redirect_from:
 ## Contact
 
 <p class="ks-contact"><span class="ks-label">Email</span><a href="mailto:shen.1732@osu.edu">shen.1732@osu.edu</a></p>
+
+<p class="ks-contact"><span class="ks-label">Profile</span><a href="{{ site.author.googlescholar }}" target="_blank" rel="me">Google Scholar</a></p>

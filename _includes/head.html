@@ -12,6 +12,8 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+{% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
@@ -31,18 +33,24 @@
   "name": "Kris Shen",
   "alternateName": "Kris Shen Finance",
   "url": "{{ site.url }}",
-  "sameAs": [
-    {% if site.author.links %}
-      {% for link in site.author.links %}
-        "{{ link.url }}"{% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    {% endif %}
+  "sameAs": [{% if site.author.googlescholar %}
+    {{ site.author.googlescholar | jsonify }}{% endif %}
   ],
   "jobTitle": "PhD Candidate in Finance",
   "worksFor": {
-    "@type": "Organization",
+    "@type": "CollegeOrUniversity",
+    "name": "The Ohio State University",
+    "department": {
+      "@type": "Organization",
+      "name": "Fisher College of Business"
+    },
+    "url": "https://fisher.osu.edu/"
+  },
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
     "name": "The Ohio State University, Fisher College of Business"
   },
+  "knowsAbout": ["Asset Pricing", "Finance", "Technology and Innovation", "Private Markets", "Public Markets"],
   "alumniOf": [
     {
       "@type": "CollegeOrUniversity",
@@ -74,14 +82,7 @@
     "@type": "Person",
     "name": "Kris Shen"
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
+  "inLanguage": "en-US"
 }
 </script>
 {% endif %}
