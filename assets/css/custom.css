@@ -54,6 +54,7 @@
   --ks-gutter: 1.5rem;   /* breathing room outside the frame */
   --ks-side:   min(24rem, calc(var(--ks-frame) * 0.38));  /* home photo column */
   --ks-split:  3rem;     /* gap between photo column and text column */
+  --ks-read:   42rem;    /* section pages keep the earlier, narrower measure */
 }
 
 html[data-theme="dark"] {
@@ -241,10 +242,11 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   }
 }
 
-/* Section pages (research / teaching / academic service) */
+/* Section pages (research / teaching / academic service): the earlier
+   42rem width, left-aligned so they line up with the masthead wordmark */
 .archive--wide {
   width: 100% !important;
-  max-width: none !important;
+  max-width: var(--ks-read) !important;
   margin: 0 !important;
   padding: 0 !important;
   float: none !important;
@@ -654,7 +656,6 @@ html[data-theme="dark"] .disc-btn:hover {
 .ks-note a:hover { color: var(--ks-accent-deep) !important; border-bottom-color: var(--ks-accent-edge) !important; }
 
 .abstract {
-  max-width: 44rem;        /* keep lines readable now that cards span the wide frame */
   font-size: 0.855rem;
   line-height: 1.66;
   color: var(--ks-muted);
