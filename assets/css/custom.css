@@ -209,12 +209,7 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 }
 
 .greedy-nav .visible-links a:hover::after { right: 0; }
-.masthead__menu-item--lg a::after,
-#theme-toggle a::after { display: none !important; }
-
-/* Theme toggle */
-#theme-toggle a { color: var(--ks-faint) !important; cursor: pointer; }
-#theme-toggle a:hover { color: var(--ks-accent) !important; }
+.masthead__menu-item--lg a::after { display: none !important; }
 
 /* --------------------------------------------------------------------------
    4. Page frame + titles

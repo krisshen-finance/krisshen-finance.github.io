@@ -19,4 +19,19 @@
 <link rel="icon" href="/images/KleinBottle.png"/>
 <meta name="theme-color" content="#ffffff"/>
 
+<!-- Light theme only. main.min.js would otherwise switch to dark mode from a
+     saved choice or the visitor's system setting, so pin the saved choice to
+     light before it runs and strip any dark flag that still gets set. -->
+<meta name="color-scheme" content="light"/>
+<script>
+  (function () {
+    try { localStorage.setItem("theme", "light"); } catch (e) {}
+    var root = document.documentElement;
+    root.removeAttribute("data-theme");
+    new MutationObserver(function () {
+      if (root.getAttribute("data-theme") === "dark") root.removeAttribute("data-theme");
+    }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+  })();
+</script>
+
 <!-- end custom head snippets -->
