@@ -36,8 +36,8 @@
      layout and the section pages all align to these edges. */
   --ks-frame:  42rem;    /* content width */
   --ks-gutter: 1.5rem;   /* breathing room outside the frame */
-  --ks-side:   12.5rem;  /* home sidebar column */
-  --ks-split:  2.5rem;   /* gap between sidebar and text column */
+  --ks-side:   16.5rem;  /* home sidebar column (wide enough for the 4:3 portrait) */
+  --ks-split:  2rem;     /* gap between sidebar and text column */
 }
 
 html[data-theme="dark"] {
@@ -290,34 +290,25 @@ html[data-theme="dark"] .archive a:hover { color: #a3dcec; }
 
 .sidebar { font-family: var(--ks-sans); }
 
-/* Portrait: a true circle, cropped close on the face.
-   The source photo is 1184x864 landscape, so border-radius alone gives an
-   ellipse. Instead the wrapper is a square window with overflow clipped, and
-   the image is oversized and offset inside it to frame a 510px square of the
-   original centred on the face (source box x 403-913, y 136-646).
-   Percentages below are that box expressed against the window:
-     width  1184/510, left -403/510, top -136/510. */
+/* Portrait: the full, uncropped 4:3 photo in a rounded rectangle.
+   The image keeps its own proportions (height follows width); the wrapper
+   only rounds the corners and draws the thin ring. */
 div.author__avatar {
-  position: relative;
-  width: 60%;
-  min-width: 120px;
-  max-width: 190px;
+  width: 100%;
+  max-width: 340px;
   margin: 6px auto 1.4rem;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 0 5px var(--global-bg-color),
               0 0 0 6px var(--ks-rule-strong);
 }
 
 div.author__avatar img {
-  position: absolute !important;
-  width: 232.16% !important;
+  display: block !important;
+  width: 100% !important;
   height: auto !important;
   min-width: 0 !important;
   max-width: none !important;
-  left: -79.02% !important;
-  top: -26.67% !important;
   margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
@@ -326,7 +317,7 @@ div.author__avatar img {
 }
 
 @media screen and (min-width: 768px) {
-  div.author__avatar { max-width: 210px; }
+  div.author__avatar { max-width: 360px; }
 }
 
 @media screen and (min-width: 925px) {

@@ -23,7 +23,7 @@ repository               : "krisshen-finance/krisshen-finance.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Kris Shen"
   pronouns         : # example: "she/her"  
   bio              : "PhD candidate in Finance at The Ohio State University, Fisher College of Business"
