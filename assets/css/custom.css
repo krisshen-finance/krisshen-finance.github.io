@@ -33,11 +33,13 @@
   --ks-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* One frame for the whole site: the masthead, the home two-column
-     layout and the section pages all align to these edges. */
-  --ks-frame:  42rem;    /* content width */
+     layout and the section pages all align to these edges.
+     The frame is 64rem on wide screens and shrinks with the window
+     (leaving room for the gutters and a scrollbar) on narrower ones. */
+  --ks-frame:  min(64rem, calc(100vw - 4rem));  /* content width */
   --ks-gutter: 1.5rem;   /* breathing room outside the frame */
-  --ks-side:   16.5rem;  /* home sidebar column (wide enough for the 4:3 portrait) */
-  --ks-split:  2rem;     /* gap between sidebar and text column */
+  --ks-side:   min(24rem, calc(var(--ks-frame) * 0.38));  /* home photo column */
+  --ks-split:  3rem;     /* gap between photo column and text column */
 }
 
 html[data-theme="dark"] {
@@ -642,6 +644,7 @@ html[data-theme="dark"] .disc-btn:hover {
 .ks-note a:hover { color: var(--ks-accent-deep) !important; border-bottom-color: var(--ks-accent-edge) !important; }
 
 .abstract {
+  max-width: 44rem;        /* keep lines readable now that cards span the wide frame */
   font-size: 0.855rem;
   line-height: 1.66;
   color: var(--ks-muted);
