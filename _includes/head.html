@@ -19,8 +19,10 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-<link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
+{% comment %} ?v= changes on every build, so browsers fetch fresh styles right after a deploy {% endcomment %}
+{% assign asset_version = site.time | date: '%s' %}
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ asset_version }}">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css?v={{ asset_version }}">
 
 <meta http-equiv="cleartype" content="on">
 
