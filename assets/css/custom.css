@@ -212,6 +212,26 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 .greedy-nav .visible-links a:hover::after { right: 0; }
 .masthead__menu-item--lg a::after { display: none !important; }
 
+/* Wide screens: name pinned left, menu links centred across the header.
+   The links list keeps its natural width (the theme's overflow script
+   measures it), and auto margins centre it within the nav. */
+@media screen and (min-width: 925px) {
+  /* height = the name's row (2.68rem), so taking the name out of the row
+     does not shrink the header; links stay vertically centred */
+  .greedy-nav .visible-links { margin: 0 auto; height: 2.68rem; }
+
+  .greedy-nav .visible-links > li.masthead__menu-item--lg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* first visible link after the name: no leading margin, so the
+     group is centred exactly */
+  .greedy-nav .visible-links > li.masthead__menu-item--lg + li a { margin-left: 0; }
+}
+
 /* --------------------------------------------------------------------------
    4. Page frame + titles
    -------------------------------------------------------------------------- */
@@ -243,11 +263,11 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 }
 
 /* Section pages (research / teaching / academic service): the earlier
-   42rem width, left-aligned so they line up with the masthead wordmark */
+   42rem width, centred on the page under the centred menu links */
 .archive--wide {
   width: 100% !important;
   max-width: var(--ks-read) !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
   padding: 0 !important;
   float: none !important;
 }
