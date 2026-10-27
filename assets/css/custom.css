@@ -2,8 +2,9 @@
    Kris Shen — site design layer
    Loaded after main.css, so everything here wins.
 
-   Palette is unchanged: #52adc8 remains the accent, #2f7f93 the hover.
-   Everything else here is structure, typography and spacing.
+   Palette: orange, sampled from the lantana flowers in the portrait.
+   Every accent colour below goes through the --ks-accent* tokens, so the
+   whole scheme is set in section 1.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -11,22 +12,35 @@
    -------------------------------------------------------------------------- */
 
 :root {
-  /* Accent — the existing site blue, untouched */
-  --ks-accent:        #52adc8;
-  --ks-accent-deep:   #2f7f93;
-  --ks-accent-ink:    #24707f;
-  --ks-accent-wash:   rgba(82, 173, 200, 0.08);
-  --ks-accent-edge:   rgba(82, 173, 200, 0.42);
+  /* Accent — orange from the portrait's flowers.
+     accent: rules, markers, hover fills (vivid)
+     deep / ink: hover and link text on white (5.2:1 and 5.8:1 contrast)
+     on-dark / on-dark-hover: link text on the dark background (7.4:1, 9.9:1) */
+  --ks-accent:              #d87732;
+  --ks-accent-deep:         #ac551e;
+  --ks-accent-ink:          #9f501c;
+  --ks-accent-wash:         rgba(216, 119, 50, 0.08);
+  --ks-accent-edge:         rgba(216, 119, 50, 0.42);
+  --ks-accent-on-dark:      #eea66b;
+  --ks-accent-on-dark-hover:#fbc89a;
+  --ks-accent-tint:         rgba(216, 119, 50, 0.10);  /* dark-mode pill fill */
+  --ks-accent-tint-edge:    rgba(216, 119, 50, 0.30);  /* dark-mode pill border */
 
-  /* Neutrals, tuned slightly cool so they sit with the blue */
+  /* The theme's own link colours (used outside the styled areas) */
+  --global-link-color:         var(--ks-accent-ink);
+  --global-link-color-hover:   var(--ks-accent-deep);
+  --global-link-color-visited: var(--ks-accent-ink);
+
+  /* Neutrals: cool slate text to sit with the navy suit; warm,
+     near-white surfaces and hairlines to sit with the orange */
   --ks-ink:           #16242b;  /* headings */
   --ks-body:          #3c4a52;  /* running text */
   --ks-muted:         #6c7b84;  /* secondary text */
   --ks-faint:         #8d9aa2;  /* labels */
-  --ks-rule:          #e7edf0;  /* hairlines */
-  --ks-rule-strong:   #d5dfe4;
-  --ks-surface:       #f8fbfc;  /* cards */
-  --ks-surface-2:     #eef5f8;  /* pills */
+  --ks-rule:          #ece8e4;  /* hairlines */
+  --ks-rule-strong:   #ddd6d0;
+  --ks-surface:       #fcfaf8;  /* cards */
+  --ks-surface-2:     #f7f0ea;  /* pills */
   --ks-shadow:        0 1px 2px rgba(22, 36, 43, 0.04);
 
   --ks-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -51,20 +65,21 @@ html[data-theme="dark"] {
   --ks-rule-strong:   #444e54;
   --ks-surface:       #2b3134;
   --ks-surface-2:     #262c2f;
-  --ks-accent-wash:   rgba(82, 173, 200, 0.12);
-  --ks-accent-edge:   rgba(82, 173, 200, 0.38);
+  --ks-accent-wash:   rgba(216, 119, 50, 0.12);
+  --ks-accent-edge:   rgba(216, 119, 50, 0.38);
   --ks-shadow:        none;
 }
 
-/* Deepen the default dark background: #474747 washed everything out.
-   The blue is untouched — only the neutral ground moves. */
+/* Deepen the default dark background: #474747 washed everything out. */
 html[data-theme="dark"] {
   --global-bg-color:        #232729;
   --global-base-color:      #232729;
   --global-footer-bg-color: #1d2123;
   --global-border-color:    #3a4245;
   --global-text-color:      #c9d4da;
-  --global-link-color:      #6cc3dc;
+  --global-link-color:      #e8995b;
+  --global-link-color-hover:   var(--ks-accent-on-dark-hover);
+  --global-link-color-visited: var(--ks-accent-on-dark);
 }
 
 /* --------------------------------------------------------------------------
@@ -121,10 +136,10 @@ h1, h2, h3, h4, h5, h6,
 html[data-theme="dark"] .page__content a,
 html[data-theme="dark"] .archive a,
 html[data-theme="dark"] .page__content a:visited,
-html[data-theme="dark"] .archive a:visited { color: #7cc9df; }
+html[data-theme="dark"] .archive a:visited { color: var(--ks-accent-on-dark); }
 
 html[data-theme="dark"] .page__content a:hover,
-html[data-theme="dark"] .archive a:hover { color: #a3dcec; }
+html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover); }
 
 /* --------------------------------------------------------------------------
    3. Masthead
@@ -393,7 +408,7 @@ div.author__avatar img {
   margin: 0 0 0.32rem !important;
 }
 
-html[data-theme="dark"] .ks-role { color: #7cc9df; }
+html[data-theme="dark"] .ks-role { color: var(--ks-accent-on-dark); }
 
 /* Affiliation line: small, tracked, quiet */
 .ks-eyebrow {
@@ -513,7 +528,7 @@ html[data-theme="dark"] .pub-card:hover { box-shadow: none; }
   border-bottom-color: var(--ks-accent-edge) !important;
 }
 
-html[data-theme="dark"] .pub-card__title a:hover { color: #7cc9df !important; }
+html[data-theme="dark"] .pub-card__title a:hover { color: var(--ks-accent-on-dark) !important; }
 
 /* Co-author / venue line */
 .pub-card .pub-card__meta {
@@ -535,7 +550,7 @@ html[data-theme="dark"] .pub-card__title a:hover { color: #7cc9df !important; }
   margin: 0.15rem 0 0 !important;
 }
 
-html[data-theme="dark"] .pub-card__venue { color: #7cc9df; }
+html[data-theme="dark"] .pub-card__venue { color: var(--ks-accent-on-dark); }
 
 /* --------------------------------------------------------------------------
    8. Pill links  (Internet Appendix, SSRN, slides, …)
@@ -584,9 +599,9 @@ html[data-theme="dark"] .pub-card__venue { color: #7cc9df; }
 
 html[data-theme="dark"] .pill,
 html[data-theme="dark"] .disc-btn {
-  background: rgba(82, 173, 200, 0.10);
-  color: #7cc9df !important;
-  border-color: rgba(82, 173, 200, 0.30) !important;
+  background: var(--ks-accent-tint);
+  color: var(--ks-accent-on-dark) !important;
+  border-color: var(--ks-accent-tint-edge) !important;
 }
 
 html[data-theme="dark"] .pill:hover,
@@ -683,9 +698,9 @@ details.abstract-toggle > summary:hover {
 }
 
 html[data-theme="dark"] details.abstract-toggle > summary {
-  background: rgba(82, 173, 200, 0.10);
-  color: #7cc9df;
-  border-color: rgba(82, 173, 200, 0.30);
+  background: var(--ks-accent-tint);
+  color: var(--ks-accent-on-dark);
+  border-color: var(--ks-accent-tint-edge);
 }
 
 html[data-theme="dark"] details.abstract-toggle > summary:hover {
@@ -730,7 +745,7 @@ details.abstract-toggle[open] > summary { margin-bottom: 0.65rem; }
 }
 
 .entry__aside strong { color: var(--ks-accent-ink); font-weight: 600; }
-html[data-theme="dark"] .entry__aside strong { color: #7cc9df; }
+html[data-theme="dark"] .entry__aside strong { color: var(--ks-accent-on-dark); }
 
 /* Course list inside a teaching entry */
 .course-list {
@@ -810,7 +825,7 @@ hr {
   margin: 2.4rem 0;
 }
 
-/* Consistent blue focus ring */
+/* Consistent accent focus ring */
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible,
