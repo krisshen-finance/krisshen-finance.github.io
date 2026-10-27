@@ -154,10 +154,14 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 
 .masthead::after { display: none; }
 
+/* The header uses the section-page column (--ks-read) on every page, home
+   included, so it never moves between pages and the name lines up with
+   the section titles below it. */
 .masthead__inner-wrap {
   padding: 0.85em var(--ks-gutter) !important;
   font-family: var(--ks-sans);
-  max-width: calc(var(--ks-frame) + 2 * var(--ks-gutter)) !important;
+  /* min() with the frame: on narrow windows match #main's width exactly */
+  max-width: calc(min(var(--ks-read), var(--ks-frame)) + 2 * var(--ks-gutter)) !important;
   margin: 0 auto !important;
 }
 
@@ -212,12 +216,20 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 .greedy-nav .visible-links a:hover::after { right: 0; }
 .masthead__menu-item--lg a::after { display: none !important; }
 
-/* Wide screens: the whole top row (name + menu links) is centred in the
-   header. The row keeps its natural width (the theme's overflow script
-   measures it), and auto margins centre it. Below 925px the row stays
-   left-aligned next to the menu button. */
+/* Wide screens: name at the column's left edge, menu links at its right
+   edge. The links list keeps its natural width (the theme's overflow
+   script measures it); the name is taken out of the row and pinned left.
+   The row keeps the name's height (2.68rem) so the header does not shrink.
+   Below 925px the theme's own left-aligned row and menu button apply. */
 @media screen and (min-width: 925px) {
-  .greedy-nav .visible-links { margin: 0 auto; }
+  .greedy-nav .visible-links { margin: 0 0 0 auto; height: 2.68rem; }
+
+  .greedy-nav .visible-links > li.masthead__menu-item--lg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 /* --------------------------------------------------------------------------
