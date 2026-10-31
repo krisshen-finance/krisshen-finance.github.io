@@ -52,7 +52,7 @@
      (leaving room for the gutters and a scrollbar) on narrower ones. */
   --ks-frame:  min(64rem, calc(100vw - 4rem));  /* content width */
   --ks-gutter: 1.5rem;   /* breathing room outside the frame */
-  --ks-side:   min(24rem, calc(var(--ks-frame) * 0.38));  /* home photo column */
+  --ks-side:   min(20rem, calc(var(--ks-frame) * 0.32));  /* home photo column, sized for the 2:3 portrait */
   --ks-split:  3rem;     /* gap between photo column and text column */
   --ks-read:   42rem;    /* section pages keep the earlier, narrower measure */
 }
@@ -308,12 +308,12 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 
 .sidebar { font-family: var(--ks-sans); }
 
-/* Portrait: the full, uncropped 4:3 photo in a rounded rectangle.
+/* Portrait: the full, uncropped 2:3 photo in a rounded rectangle.
    The image keeps its own proportions (height follows width); the wrapper
    only rounds the corners and draws the thin ring. */
 div.author__avatar {
   width: 100%;
-  max-width: 340px;
+  max-width: 260px;
   margin: 6px auto 1.4rem;
   border-radius: 12px;
   overflow: hidden;
@@ -335,12 +335,14 @@ div.author__avatar img {
 }
 
 @media screen and (min-width: 768px) {
-  div.author__avatar { max-width: 360px; }
+  div.author__avatar { max-width: 280px; }
 }
 
+/* The sidebar is fixed and 100vh tall, so on short windows the photo
+   gives up width (keeping 2:3) rather than pushing the links off screen. */
 @media screen and (min-width: 925px) {
   div.author__avatar {
-    width: calc(100% - 12px);
+    width: min(calc(100% - 12px), calc((100vh - 19rem) * 2 / 3));
     max-width: none;
     margin: 6px auto 1.5rem;
   }
