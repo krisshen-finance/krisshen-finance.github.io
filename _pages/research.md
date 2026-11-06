@@ -12,7 +12,7 @@ author_profile: true
 
   <div class="pub-card__body">
     <div class="pill-row">
-      <details class="abstract-toggle">
+      <details class="abstract-toggle" open>
         <summary>Abstract</summary>
         <div class="abstract">Do high stock valuations during the emergence of a general-purpose technology such as AI reflect price bubbles? I propose a new framework that measures the <em>AI premium gap</em>&mdash;the wedge between objective expected returns from full-information econometric benchmarks and subjective expected returns from analyst forecasts, for AI firms relative to non-AI firms. A negative gap is consistent with bubbles. From 2009 to 2024, the gap is positive. Applied to the dot-com era of the 1990s, the same framework yields a negative gap, consistent with a dot-com bubble. This contrast suggests the AI era differs fundamentally, highlighting the framework&rsquo;s broader applicability.</div>
       </details>
@@ -36,7 +36,7 @@ author_profile: true
 
   <div class="pub-card__body">
     <div class="pill-row">
-      <details class="abstract-toggle">
+      <details class="abstract-toggle" open>
         <summary>Abstract</summary>
         <div class="abstract">Doidge, Karolyi, and Stulz (2017) show that from 1999 to 2012, the US develops a listing gap relative to other countries, meaning that it has abnormally few publicly listed firms. In this paper, we update their evidence to 2023 and find that the listing gap increases, but at a low rate. By 2023, the US has about half as many listed firms per capita as other developed countries. We discuss some of the important questions raised by the existence and increase of the listing gap to which we hope researchers will find answers.</div>
       </details>
@@ -63,7 +63,7 @@ author_profile: true
   <p class="pub-card__venue">Derivatives Applications in Asset Management: From Theory to Practice, Springer Nature, 2025</p>
 
   <div class="pub-card__body">
-    <details class="abstract-toggle">
+    <details class="abstract-toggle" open>
       <summary>Abstract</summary>
       <div class="abstract">Effective liquidity management is essential for active mutual funds, particularly those managing substantial assets in dynamic market environments. This chapter explores the critical role of stock-index futures contracts in liquidity management, offering practical tools and strategies for managing cash flows, meeting redemption demands, and maintaining market exposure. The discussion covers key techniques, including cash buffers, liquid assets, and advanced derivative strategies such as rolling futures contracts and mixed approaches using options and futures. Case studies illustrate how fund managers reinvest dividends, manage inflows and outflows, and optimize portfolio exposure under varying market conditions. Additionally, the chapter addresses challenges in liquidity management, including transaction costs, volatile markets, and regulatory uncertainty. By leveraging index futures and other derivatives, fund managers can achieve efficient liquidity management while preserving strategic objectives and investor confidence.</div>
     </details>
