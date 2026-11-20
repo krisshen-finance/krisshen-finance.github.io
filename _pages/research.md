@@ -8,7 +8,7 @@ author_profile: true
 ## Working Papers
 
 <div class="pub-card">
-  <h3 class="pub-card__title">AI Valuations: Bubble or Fundamentals?</h3>
+  <h3 class="pub-card__title"><a href="https://ssrn.com/abstract=7405818" target="_blank">AI Valuations: Bubble or Fundamentals?</a></h3>
 
   <div class="pub-card__body">
     <div class="pill-row">
@@ -28,7 +28,7 @@ author_profile: true
 </div>
 
 <div class="pub-card">
-  <h3 class="pub-card__title">What Is the Real Value of Patent Grants?</h3>
+  <h3 class="pub-card__title"><a href="https://ssrn.com/abstract=7733519" target="_blank">What Is the Real Value of Patent Grants?</a></h3>
   <p class="pub-card__meta">with <a href="https://seiwoonghong.com/" target="_blank">Seiwoong Hong</a> and <a href="https://u.osu.edu/stulz.1/" target="_blank">René M. Stulz</a></p>
 
   <div class="pub-card__body">
