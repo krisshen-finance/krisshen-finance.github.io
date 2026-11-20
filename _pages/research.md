@@ -27,6 +27,21 @@ author_profile: true
   </div>
 </div>
 
+<div class="pub-card">
+  <h3 class="pub-card__title">What Is the Real Value of Patent Grants?</h3>
+  <p class="pub-card__meta">with <a href="https://seiwoonghong.com/" target="_blank">Seiwoong Hong</a> and <a href="https://u.osu.edu/stulz.1/" target="_blank">René M. Stulz</a></p>
+
+  <div class="pub-card__body">
+    <div class="pill-row">
+      <details class="abstract-toggle">
+        <summary>Abstract</summary>
+        <div class="abstract">Measuring the (private) economic value of patent grants has been a longstanding challenge. In a highly cited paper, Kogan, Papanikolaou, Seru, and Stoffman (KPSS, 2017) derive an estimator using the grantee&rsquo;s filtered abnormal stock return associated with the grant date. We show that this estimator does not measure the value of patent grants. The grantee&rsquo;s market equity and idiosyncratic volatility, together with the number of patents granted to the firm on the same day, explain essentially all the variation in the KPSS-estimated value of patent grants. Abnormal returns associated with patent grants do not explain the relation between the KPSS patent grant value measure and forward citations or future firm growth. Using alternative approaches, we find that the average impact of patent grant announcements on shareholder wealth is neither statistically nor economically reliably significant.</div>
+      </details>
+      <a class="pill" href="https://ssrn.com/abstract=7733519" target="_blank">SSRN</a>
+    </div>
+  </div>
+</div>
+
 ## Publications
 
 <div class="pub-card">
