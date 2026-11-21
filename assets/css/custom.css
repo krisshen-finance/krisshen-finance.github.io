@@ -54,7 +54,7 @@
   --ks-gutter: 1.5rem;   /* breathing room outside the frame */
   --ks-side:   min(20rem, calc(var(--ks-frame) * 0.32));  /* home photo column, sized for the 2:3 portrait */
   --ks-split:  3rem;     /* gap between photo column and text column */
-  --ks-read:   42rem;    /* section pages keep the earlier, narrower measure */
+  --ks-read:   var(--ks-frame);  /* section pages and header span the full frame */
 }
 
 html[data-theme="dark"] {
@@ -246,8 +246,8 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   }
 }
 
-/* Section pages (research / teaching / academic service): the earlier
-   42rem width, centred on the page under the centred menu links */
+/* Section pages (research / teaching / academic service): the full
+   frame width, centred on the page under the menu links */
 .archive--wide {
   width: 100% !important;
   max-width: var(--ks-read) !important;
@@ -258,11 +258,11 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
 
 .page__title,
 .archive .page__title {
-  font-size: 2.15rem;
+  font-size: 1.95rem;
   font-weight: 600;
   letter-spacing: -0.022em;
   line-height: 1.15;
-  margin: 1.3rem 0 0;
+  margin: 0.7rem 0 0;
   text-align: left;
 }
 
@@ -272,11 +272,11 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   display: block;
   width: 2.25rem;
   height: 2px;
-  margin: 0.7rem 0 0;
+  margin: 0.5rem 0 0;
   background: var(--ks-accent);
 }
 
-.archive--wide .page__title { margin-bottom: 1.5rem; }
+.archive--wide .page__title { margin-bottom: 0.8rem; }
 
 .is-home .page__title { font-size: 2.3rem; margin-bottom: 0.45rem; }
 
@@ -287,8 +287,8 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   font-weight: 600;
   letter-spacing: -0.004em;
   color: var(--ks-ink);
-  margin: 2rem 0 0.85rem;
-  padding-bottom: 0.45rem;
+  margin: 1.6rem 0 0.55rem;
+  padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--ks-rule);
 }
 
@@ -497,8 +497,8 @@ hr.ks-rule-short {
   border: 1px solid var(--ks-rule);
   border-left: 3px solid var(--ks-accent-edge);
   border-radius: 5px;
-  padding: 0.9rem 1.3rem;
-  margin: 0 0 0.7rem;
+  padding: 0.65rem 1.3rem;
+  margin: 0 0 0.5rem;
   box-shadow: var(--ks-shadow);
   transition: border-left-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -572,6 +572,18 @@ html[data-theme="dark"] .pub-card__venue { color: var(--ks-accent-on-dark); }
 .pill-row > details.abstract-toggle { margin: 0; }
 .pill-row > details.abstract-toggle[open] { flex: 1 0 100%; }
 
+/* With the abstract open, the link pills stay on the button's line
+   (the "– Abstract" button has a fixed width) instead of a row below. */
+.pill-row { position: relative; }
+.pill-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+@media screen and (min-width: 600px) {
+  .pill-row > details.abstract-toggle[open] ~ .pill-links {
+    position: absolute;
+    top: 0;
+    left: 5.9rem;
+  }
+}
+
 .pill,
 .disc-btn {
   display: inline-flex !important;
@@ -623,7 +635,7 @@ html[data-theme="dark"] .disc-btn:hover {
    9. Abstract + labelled meta blocks
    -------------------------------------------------------------------------- */
 
-.pub-card__body { margin: 0.55rem 0 0; }
+.pub-card__body { margin: 0.45rem 0 0; }
 /* The body already sets the gap above its first row */
 .pub-card__body > .pill-row:first-child,
 .pub-card__body > details.abstract-toggle:first-child { margin-top: 0; }
@@ -666,13 +678,13 @@ html[data-theme="dark"] .disc-btn:hover {
 
 .abstract {
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--ks-muted);
   text-align: justify;
   hyphens: auto;
   padding-left: 0.9rem;
   border-left: 1px solid var(--ks-rule);
-  margin: 0.35rem 0 0;
+  margin: 0.2rem 0 0;
 }
 
 /* Collapsible abstract */
@@ -715,7 +727,7 @@ html[data-theme="dark"] details.abstract-toggle > summary:hover {
 
 details.abstract-toggle > summary::before { content: "+"; font-weight: 500; }
 details.abstract-toggle[open] > summary::before { content: "–"; }
-details.abstract-toggle[open] > summary { margin-bottom: 0.45rem; }
+details.abstract-toggle[open] > summary { margin-bottom: 0.35rem; }
 
 /* --------------------------------------------------------------------------
    10. Teaching + service entries
