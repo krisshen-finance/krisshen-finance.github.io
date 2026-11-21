@@ -668,6 +668,8 @@ html[data-theme="dark"] .disc-btn:hover {
   margin: 0;
   white-space: nowrap;
   padding-top: 0.08rem;
+  font-weight: 700;
+  color: var(--ks-ink);
 }
 
 .pub-card .ks-note { margin: 0.4rem 0 0 !important; }
