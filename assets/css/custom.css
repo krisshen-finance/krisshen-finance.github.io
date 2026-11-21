@@ -680,13 +680,13 @@ html[data-theme="dark"] .disc-btn:hover {
 
 .abstract {
   font-size: 0.8rem;
-  line-height: 1.45;
+  line-height: 1.62;
   color: var(--ks-muted);
   text-align: justify;
   hyphens: auto;
   padding-left: 0.9rem;
   border-left: 1px solid var(--ks-rule);
-  margin: 0.2rem 0 0;
+  margin: 0.4rem 0 0.15rem;
 }
 
 /* Collapsible abstract */
@@ -729,7 +729,7 @@ html[data-theme="dark"] details.abstract-toggle > summary:hover {
 
 details.abstract-toggle > summary::before { content: "+"; font-weight: 500; }
 details.abstract-toggle[open] > summary::before { content: "–"; }
-details.abstract-toggle[open] > summary { margin-bottom: 0.35rem; }
+details.abstract-toggle[open] > summary { margin-bottom: 0.55rem; }
 
 /* --------------------------------------------------------------------------
    10. Teaching + service entries
