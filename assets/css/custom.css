@@ -262,7 +262,7 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   font-weight: 600;
   letter-spacing: -0.022em;
   line-height: 1.15;
-  margin: 1.9rem 0 0;
+  margin: 1.3rem 0 0;
   text-align: left;
 }
 
@@ -272,11 +272,11 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   display: block;
   width: 2.25rem;
   height: 2px;
-  margin: 0.95rem 0 0;
+  margin: 0.7rem 0 0;
   background: var(--ks-accent);
 }
 
-.archive--wide .page__title { margin-bottom: 2.6rem; }
+.archive--wide .page__title { margin-bottom: 1.5rem; }
 
 .is-home .page__title { font-size: 2.3rem; margin-bottom: 0.45rem; }
 
@@ -287,8 +287,8 @@ html[data-theme="dark"] .archive a:hover { color: var(--ks-accent-on-dark-hover)
   font-weight: 600;
   letter-spacing: -0.004em;
   color: var(--ks-ink);
-  margin: 3rem 0 1.35rem;
-  padding-bottom: 0.6rem;
+  margin: 2rem 0 0.85rem;
+  padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--ks-rule);
 }
 
@@ -497,8 +497,8 @@ hr.ks-rule-short {
   border: 1px solid var(--ks-rule);
   border-left: 3px solid var(--ks-accent-edge);
   border-radius: 5px;
-  padding: 1.3rem 1.5rem;
-  margin: 0 0 0.9rem;
+  padding: 0.9rem 1.3rem;
+  margin: 0 0 0.7rem;
   box-shadow: var(--ks-shadow);
   transition: border-left-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -518,7 +518,7 @@ html[data-theme="dark"] .pub-card:hover { box-shadow: none; }
   line-height: 1.34;
   letter-spacing: -0.008em;
   color: var(--ks-ink);
-  margin: 0 0 0.4rem !important;
+  margin: 0 0 0.25rem !important;
 }
 
 .pub-card__title a {
@@ -623,7 +623,10 @@ html[data-theme="dark"] .disc-btn:hover {
    9. Abstract + labelled meta blocks
    -------------------------------------------------------------------------- */
 
-.pub-card__body { margin: 0.9rem 0 0; }
+.pub-card__body { margin: 0.55rem 0 0; }
+/* The body already sets the gap above its first row */
+.pub-card__body > .pill-row:first-child,
+.pub-card__body > details.abstract-toggle:first-child { margin-top: 0; }
 
 .ks-label {
   display: block;
@@ -655,15 +658,15 @@ html[data-theme="dark"] .disc-btn:hover {
   padding-top: 0.08rem;
 }
 
-.pub-card .ks-note { margin: 0.5rem 0 0 !important; }
+.pub-card .ks-note { margin: 0.4rem 0 0 !important; }
 .pub-card .ks-note + .ks-note { margin-top: 0.35rem !important; }
 
 .ks-note a { color: var(--ks-muted) !important; border-bottom-color: var(--ks-rule-strong) !important; }
 .ks-note a:hover { color: var(--ks-accent-deep) !important; border-bottom-color: var(--ks-accent-edge) !important; }
 
 .abstract {
-  font-size: 0.855rem;
-  line-height: 1.66;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: var(--ks-muted);
   text-align: justify;
   hyphens: auto;
@@ -712,7 +715,7 @@ html[data-theme="dark"] details.abstract-toggle > summary:hover {
 
 details.abstract-toggle > summary::before { content: "+"; font-weight: 500; }
 details.abstract-toggle[open] > summary::before { content: "–"; }
-details.abstract-toggle[open] > summary { margin-bottom: 0.65rem; }
+details.abstract-toggle[open] > summary { margin-bottom: 0.45rem; }
 
 /* --------------------------------------------------------------------------
    10. Teaching + service entries
