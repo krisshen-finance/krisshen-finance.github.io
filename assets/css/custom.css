@@ -674,6 +674,9 @@ html[data-theme="dark"] .disc-btn:hover {
 
 .pub-card .ks-note { margin: 0.4rem 0 0 !important; }
 .pub-card .ks-note + .ks-note { margin-top: 0.35rem !important; }
+/* Presentations / coverage lines read as bold, label and contents alike */
+.pub-card .ks-note { font-weight: 600; color: var(--ks-ink); }
+.pub-card .ks-note a { color: var(--ks-ink) !important; }
 
 .ks-note a { color: var(--ks-muted) !important; border-bottom-color: var(--ks-rule-strong) !important; }
 .ks-note a:hover { color: var(--ks-accent-deep) !important; border-bottom-color: var(--ks-accent-edge) !important; }
