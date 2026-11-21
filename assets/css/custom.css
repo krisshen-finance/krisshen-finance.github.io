@@ -555,6 +555,15 @@ html[data-theme="dark"] .pub-card__title a:hover { color: var(--ks-accent-on-dar
 
 html[data-theme="dark"] .pub-card__venue { color: var(--ks-accent-on-dark); }
 
+/* A plain note after the venue, e.g. (invited) */
+.pub-card__tag {
+  font-family: var(--ks-sans);
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--ks-muted);
+  margin-left: 0.15rem;
+}
+
 /* --------------------------------------------------------------------------
    8. Pill links  (Internet Appendix, SSRN, slides, …)
    -------------------------------------------------------------------------- */

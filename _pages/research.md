@@ -51,7 +51,7 @@ author_profile: true
 <div class="pub-card">
   <h3 class="pub-card__title"><a href="https://onlinelibrary.wiley.com/doi/10.1111/fire.12439" target="_blank">Are There Too Few Publicly Listed Firms in the US?</a></h3>
   <p class="pub-card__meta">with <a href="https://discover.research.utoronto.ca/7530-craig-doidge" target="_blank">Craig Doidge</a>, <a href="https://www.johnson.cornell.edu/faculty-research/faculty/gak56/" target="_blank">George Andrew Karolyi</a>, and <a href="https://u.osu.edu/stulz.1/" target="_blank">René M. Stulz</a></p>
-  <p class="pub-card__venue">Financial Review, 2025, 60, 317–329</p>
+  <p class="pub-card__venue">Financial Review, 2025, 60, 317–329 <span class="pub-card__tag">(invited)</span></p>
 
   <div class="pub-card__body">
     <div class="pill-row">
