@@ -775,6 +775,8 @@ details.comments-toggle[open] > summary { margin-bottom: 0.8rem; }
   font-size: 0.87rem;
   line-height: 1.6;
   color: var(--ks-ink);
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* --------------------------------------------------------------------------
