@@ -755,7 +755,12 @@ details.comments-toggle[open] > summary { margin-bottom: 0.8rem; }
 }
 .sei-comments__note a { color: var(--ks-muted) !important; border-bottom-color: var(--ks-rule-strong) !important; }
 
-.sei-comments__list { columns: 2 17rem; column-gap: 1.6rem; }
+/* Two hand-balanced columns (the quotes are split in the markup so the
+   columns end at about the same height); one column on narrow screens */
+.sei-comments__list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.6rem; align-items: start; }
+@media screen and (max-width: 700px) {
+  .sei-comments__list { grid-template-columns: 1fr; }
+}
 
 .sei-quote {
   break-inside: avoid;
